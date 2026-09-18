@@ -55,4 +55,6 @@ Windows 11 10.0.26200、Chromium 153.0.8010.12、ORT Web 1.27.0、Intel i5-10400
 
 模型来源、公开仓库、npm与正式HTTPS Demo本轮尚未发布；不能用本地URL代替双源固定提交证据。生产构建禁止未分发来源推理、不包含本地模型地址。下一阶段需完成ModelScope/Hugging Face分发与CORS/SHA校验、远程仓库治理、首次npm与正式Demo发布。
 
+[独立审查记录](review.md)确认本地候选可交付，无未解决阻断问题；上游源码身份锁的非阻断复现改进单独保留，未来重跑参考前处理。
+
 首版不包含视频、摄像头、切片拼接、FCOSR、FP16/量化或NPU。未验证移动端，也不阻塞本轮桌面开发。模型固定身份及许可采用依据延续[门户可行性评估](https://github.com/chenmohan123/chenmohan123.github.io/tree/674a0705ff56c7b9ce32f0bfd6733f536dfe9029/reports/rotated-detection/2026-09-18-feasibility)。完整复现见[验收脚本说明](../../scripts/evaluation/README.md)。
