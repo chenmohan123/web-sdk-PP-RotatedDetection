@@ -1,0 +1,48 @@
+{
+  "name": "web-sdk-pp-rotated-detection",
+  "version": "0.1.0",
+  "description": "基于 PP-YOLOE-R 的浏览器旋转框检测 SDK",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection.git"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./inference.worker.js": "./dist/inference.worker.js"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build.mjs",
+    "check:package": "node scripts/check-package.mjs"
+  },
+  "dependencies": {
+    "onnxruntime-web": "1.27.0",
+    "polygon-clipping": "0.15.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.0",
+    "fake-indexeddb": "^6.2.5",
+    "typescript": "5.9.3",
+    "vitest": "^3.2.4",
+    "playwright": "1.63.0"
+  }
+}
