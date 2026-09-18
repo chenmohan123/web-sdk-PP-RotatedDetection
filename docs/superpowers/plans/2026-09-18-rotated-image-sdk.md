@@ -25,7 +25,7 @@
 ```ts
 expect(corners([10,20,4,2,0],[1,1])).toEqual([[12,21],[8,21],[8,19],[12,19]]);
 expect(polygonIoU([[0,0],[4,0],[4,2],[0,2]],[[2,0],[6,0],[6,2],[2,2]])).toBeCloseTo(1/3);
-expect(select(new Float32Array([.1]),new Float32Array([10,20,4,2,0]),[1,1],{classCount:1})).toHaveLength(0);
+expect(postprocess(new Float32Array([.1]),new Float32Array([10,20,4,2,0]),[1,1],{classCount:1})).toHaveLength(0);
 ```
 - [ ] 运行对应 Vitest，记录预期失败，再实现有边界检查的几何与预处理。固定上游几何样例可复制为测试证据，不能把测试期望用待测函数生成。
 - [ ] 生命周期基础可从已发布 Segmentation 的通用模块有归因地适配；改变 factory、错误类、缓存命名、Worker 名、tensor 形状和输出处理，删除所有 mask/COCO 语义。默认 wasm/worker，不静默回退。

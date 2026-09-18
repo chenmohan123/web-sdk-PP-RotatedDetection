@@ -1,0 +1,24 @@
+{
+  "status": "failed",
+  "verifiedAt": "2026-09-18T11:51:14.131Z",
+  "environment": {
+    "browser": "153.0.8010.12",
+    "os": "10.0.26200",
+    "cpu": "Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz",
+    "ort": "1.27.0",
+    "headless": true
+  },
+  "model": {
+    "id": "ppyoloe-r-s-1024-fp32",
+    "version": "0.1.0",
+    "bytes": 33161415,
+    "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+  },
+  "sdkSha256": "c2a435dc7512f667cb6ffc13dd25a01aa4ec3730c1649884dcd638233adbf56c",
+  "workerSha256": "470d83fc1670fd42b1fe30f9bb7ef544b97a3643752c58ce08c41ac549ad9a34",
+  "modes": [],
+  "lifecycle": [],
+  "instrumentation": "测试服务器替换 ORT loader，调用原始 session.run 后捕获张量并记录实际原生GPU dispatch/submit。插桩包含传输开销，timings不作为产品性能。",
+  "error": "page.evaluate: RotatedDetectionError: 模型输入输出不符合PP-YOLOE-R 双输出契约\n    at MainRunner.load (http://127.0.0.1:60458/sdk/index.js:2331:13)\n    at async http://127.0.0.1:60458/sdk/index.js:2722:11\n    at async eval (eval at evaluate (:311:30), <anonymous>:4:85)\n    at async <anonymous>:337:30\n    at F:\\git\\00_chenmohan\\github\\web-sdk-PP-RotatedDetection\\scripts\\evaluation\\browser.mjs:59:27",
+  "modelRequests": 1
+}
