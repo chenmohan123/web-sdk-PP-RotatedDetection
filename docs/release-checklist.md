@@ -13,7 +13,7 @@
 - [x] 远程 GitHub/npm/在线 Demo 实际可达并有独立回执。
 - [x] 默认分支Ruleset：PR、最新CI、会话解决、禁止删除/强推。
 - [x] v*标签Ruleset：禁止更新/删除；最小绕过权限。
-- [x] GitHub About、Homepage、topics与不可变GitHub Release。
+- [x] GitHub About、Homepage、topics与绑定不可变标签的GitHub Release。
 - [x] 受保护来源HTTPS部署、Actions Pages、github-pages环境、并发与最小权限。
 - [x] 通过远程API记录Ruleset、环境、部署标识、观测值和日期，不含凭据。
 - [x] 从 prepare 产物首次发布 npm，以 verify-only 校验同一 tarball 的 dist.integrity 和安装；权重/评估图不得进入 Git/npm/Demo。
