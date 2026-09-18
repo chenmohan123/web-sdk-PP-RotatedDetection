@@ -1,0 +1,9 @@
+{
+  "verifiedAt": "2026-09-18T13:52:12.940Z",
+  "source": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352403353",
+  "artifact": "release-package",
+  "file": "package.tgz",
+  "bytes": 6163715,
+  "sha256": "9146ac6d1c830fa98cdc730ef78e49bf5e33d3aaf69a7196b6771ab0a9a69cb6",
+  "integrity": "sha512-Ag9KH21GpGnPbp470TSXxN1PUR9O9PUuyBRQHUX3o8ZGwKOnmREHPBMpsBALcF4LocpBhhVd7q200I3/GiIjhA=="
+}

@@ -14,5 +14,7 @@
 - [x] 当前/全部本SDK缓存清理、使用量与本地隐私说明。
 - [x] 390/1280桌面浏览器视口无横向溢出（不等于手机验证）。
 - [x] 生产没有本地模型 URL 与权重；来源未完整配置时禁止推理。
-- [ ] 生产构建验证 ModelScope（默认）与 Hugging Face 固定 revision，覆盖两来源 × CPU/GPU × main/Worker。
-- [ ] 记录 HTTPS Pages 的源提交、成功部署与线上双源实测回执。
+- [x] 生产构建验证 ModelScope（默认）与 Hugging Face 固定 revision，覆盖两来源 × CPU/GPU × main/Worker。
+- [x] 记录 HTTPS Pages 的源提交、成功部署与线上双源实测回执。
+
+正式 Demo 首次部署源为 `09a0670c64b3c0681aced34057d3572d7973dc30`，工作流运行 `35352034205`。线上八组合、来源失败不换源及22项资产完整摘要比对见 `reports/2026-09-18-release/demo-online.json` 和 `demo-assets-online.json`。

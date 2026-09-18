@@ -37,3 +37,9 @@ PP-YOLOE-R-s单尺度1024 FP32，33,161,415字节，SHA-256 `de2f4c94061bda4bfaa
 4. npm Trusted Publishing仅绑定本仓库`release.yml`与`npm`环境，配置回读通过后再启用后续tag自动publish。
 
 所有pnpm命令附`--config.verify-deps-before-run=false --config.manage-package-manager-versions=false`。实际远程上线日期/URL、安装测试和安全验证结果只在完成后记录。
+
+## 正式 Demo 上线
+
+[PR #1](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/pull/1)经[独立审查及复审](review.md)、最新CI通过后合并到`09a0670c64b3c0681aced34057d3572d7973dc30`。[Pages运行35352034205](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205)成功部署到[正式HTTPS Demo](https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/)。
+
+[线上八组合](demo-online.json)均实际从明确来源下载模型，得到136框并与基线数值一致，显式Hugging Face失败不切ModelScope，无页面错误。[22项线上资产](demo-assets-online.json)逐文件完整GET的bytes/SHA与本地已验收构建一致；不只是检查HTTP首页可达。
