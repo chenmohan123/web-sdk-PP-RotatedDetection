@@ -7,9 +7,13 @@ const state = vi.hoisted(() => ({
   loadGate: undefined as Promise<void> | undefined,
   runGate: undefined as Promise<void> | undefined,
   fail: false,
+  cacheReadFails: false,
 }));
 vi.mock("../src/cache", () => ({
-  readModelCache: async (k: string) => state.cache.get(k)?.slice(),
+  readModelCache: async (k: string) => {
+    if (state.cacheReadFails) throw new Error("缓存不可用");
+    return state.cache.get(k)?.slice();
+  },
   writeModelCache: async (k: string, v: Uint8Array) => {
     state.cache.set(k, v.slice());
   },
@@ -72,6 +76,7 @@ beforeEach(() => {
     loadGate: undefined,
     runGate: undefined,
     fail: false,
+    cacheReadFails: false,
   });
   vi.stubGlobal(
     "fetch",
@@ -79,6 +84,63 @@ beforeEach(() => {
   );
 });
 afterEach(() => vi.unstubAllGlobals());
+async function loadEvents() {
+  const sdk = make(),
+    events: string[] = [];
+  await sdk.load({
+    onProgress: (event) => {
+      events.push(
+        event.phase + ("cacheStatus" in event ? `:${event.cacheStatus}` : ""),
+      );
+    },
+  });
+  await sdk.dispose();
+  return events;
+}
+it("缓存未命中和不可用均先报告reading、miss再下载", async () => {
+  const expected = [
+    "cache:reading",
+    "cache:miss",
+    "downloading",
+    "downloading",
+    "integrity",
+    "loading",
+    "ready",
+  ];
+  expect(await loadEvents()).toEqual(expected);
+  state.cacheReadFails = true;
+  expect(await loadEvents()).toEqual(expected);
+});
+it("缓存有效命中只在SHA校验通过后报告hit且不下载", async () => {
+  state.cache.set(
+    JSON.stringify([model.id, model.version, model.sha256]),
+    bytes,
+  );
+  expect(await loadEvents()).toEqual([
+    "cache:reading",
+    "integrity",
+    "cache:hit",
+    "loading",
+    "ready",
+  ]);
+  expect(fetch).not.toHaveBeenCalled();
+});
+it("缓存损坏先报告invalid再重下载且不报告hit或miss", async () => {
+  state.cache.set(
+    JSON.stringify([model.id, model.version, model.sha256]),
+    new Uint8Array(4),
+  );
+  expect(await loadEvents()).toEqual([
+    "cache:reading",
+    "integrity",
+    "cache:invalid",
+    "downloading",
+    "downloading",
+    "integrity",
+    "loading",
+    "ready",
+  ]);
+});
 it("拒绝非法清单、未知后端和执行模式", () => {
   expect(() =>
     createRotatedDetection({ model: { ...model, bytes: -1 } }),

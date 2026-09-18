@@ -218,6 +218,7 @@ export function createRotatedDetection(
           sessionMs: 0,
         });
         try {
+          loadOptions.onProgress?.({ phase: "cache", cacheStatus: "reading" });
           const start = performance.now();
           let bytes = await readModelCache(cacheKey).catch(() => undefined);
           timings.modelCacheReadMs = performance.now() - start;
@@ -225,9 +226,17 @@ export function createRotatedDetection(
           if (bytes) {
             loadOptions.onProgress?.({ phase: "integrity" });
             if (!(await integrity(bytes, signal))) {
+              loadOptions.onProgress?.({
+                phase: "cache",
+                cacheStatus: "invalid",
+              });
               await deleteModelCache(cacheKey).catch(() => {});
               bytes = undefined;
+            } else {
+              loadOptions.onProgress?.({ phase: "cache", cacheStatus: "hit" });
             }
+          } else {
+            loadOptions.onProgress?.({ phase: "cache", cacheStatus: "miss" });
           }
           if (!bytes) {
             bytes = await download(signal, loadOptions.onProgress);

@@ -21,7 +21,9 @@ export interface Detection {
   polygon: Polygon;
 }
 export interface LoadProgress {
-  phase: "downloading" | "integrity" | "loading" | "ready";
+  phase: "cache" | "downloading" | "integrity" | "loading" | "ready";
+  /** 仅缓存阶段提供；miss 也包括缓存不可用，hit 必须已通过字节数和 SHA 校验。 */
+  cacheStatus?: "reading" | "hit" | "miss" | "invalid";
   loadedBytes?: number;
   totalBytes?: number;
 }
