@@ -1,6 +1,11 @@
 {
   "status": "passed",
-  "verifiedAt": "2026-09-18T12:08:53.935637+00:00",
+  "verifiedAt": "2026-09-18T12:27:27.003333+00:00",
+  "evidence": {
+    "browserExecutionSha256": "2e1e86729f34f142db1453a2694254e339ff2361737c7799affc302d4b8bea59",
+    "datasetSha256": "c9219b9d4b5d3a3128d324ef0bb5d529f200827d5164f6a5a3544c9b61fc7253",
+    "capturedReferenceSha256": "b31a0353b52e1e1633314bf834367e93b42cf53e0f4455e24ffb178dd208eed1"
+  },
   "thresholds": {
     "minimumPolygonIoU": 0.995,
     "maximumScoreError": 0.001,

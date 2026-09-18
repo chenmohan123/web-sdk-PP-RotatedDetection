@@ -26,3 +26,7 @@ node scripts/evaluation/verify.mjs
 浏览器脚本通过构建后的公共 API 执行 CPU/GPU × main/Worker；九图 RGBA 加一张真实 PNG Blob，共四十项。测试服务器只绑定 localhost 和白名单资源；在 ORT loader 边界包装原始 session.run，捕获真实张量和原生 GPU 指令数。包装不改变输入输出，但引入额外网络传输耗时，因此该批次 timings 不用作产品性能宣称。实际 Demo 未插桩的观测另行报告。
 
 比较脚本分别匹配原始图片参考与实际 SDK 张量的 Paddle 参考：同类、同数量、无额外/遗漏、旋转 IoU≥.995、score误差≤.001、角点误差≤.1px。任何失败保留原值，不通过修改门槛自动变成成功。摘要复核核对本地原始文件、构建文件和参考摘要，不代替重新推理。
+
+仅补跑生命周期可使用 `node scripts/evaluation/browser.mjs --lifecycle-only`，前提是已有成功质量报告且模型与两份SDK构建摘要一致。它保留图片捕获与原始验证时间，单独更新生命周期时间；随后必须重跑compare.py和verify.mjs，因为比较结果绑定三份来源报告摘要。
+
+在途释放通过测试专用BroadcastChannel门控确认真实session.run已调用后触发，main等待结果、Worker立即终止。门控不改变质量矩阵和数值计算，只在生命周期用例延迟结果返回，不声称中断同步WASM。下载取消必须在0<loadedBytes<模型大小时触发。

@@ -61408,9 +61408,9 @@
           "passed": true,
           "detail": {
             "modelDownloadMs": 0,
-            "modelCacheReadMs": 59.5,
-            "integrityMs": 90.70000000298023,
-            "sessionMs": 135.5
+            "modelCacheReadMs": 53.19999998807907,
+            "integrityMs": 92.70000000298023,
+            "sessionMs": 150.3999999910593
           }
         },
         {
@@ -61422,7 +61422,16 @@
           "passed": true
         },
         {
-          "name": "dispose取消提交",
+          "name": "dispose已提交run",
+          "passed": true,
+          "detail": {
+            "code": "ABORTED",
+            "sessionRunSubmitted": true,
+            "settledBeforeReturn": false
+          }
+        },
+        {
+          "name": "释放后新实例恢复",
           "passed": true
         },
         {
@@ -61438,10 +61447,11 @@
           "passed": true
         },
         {
-          "name": "下载阶段取消",
+          "name": "部分字节下载取消",
           "passed": true,
           "detail": {
-            "code": "ABORTED"
+            "code": "ABORTED",
+            "loadedBytes": 196608
           }
         },
         {
@@ -61475,10 +61485,11 @@
           "passed": true
         },
         {
-          "name": "Worker活动取消",
+          "name": "Worker已提交run取消",
           "passed": true,
           "detail": {
-            "code": "ABORTED"
+            "code": "ABORTED",
+            "sessionRunSubmitted": true
           }
         },
         {
@@ -61502,9 +61513,9 @@
           "passed": true,
           "detail": {
             "modelDownloadMs": 0,
-            "modelCacheReadMs": 64.29999999701977,
-            "integrityMs": 100.80000001192093,
-            "sessionMs": 999
+            "modelCacheReadMs": 57.099999994039536,
+            "integrityMs": 89.20000000298023,
+            "sessionMs": 981.7000000029802
           }
         },
         {
@@ -61516,7 +61527,16 @@
           "passed": true
         },
         {
-          "name": "dispose取消提交",
+          "name": "dispose已提交run",
+          "passed": true,
+          "detail": {
+            "code": "ABORTED",
+            "sessionRunSubmitted": true,
+            "settledBeforeReturn": true
+          }
+        },
+        {
+          "name": "释放后新实例恢复",
           "passed": true
         },
         {
@@ -61532,10 +61552,11 @@
           "passed": true
         },
         {
-          "name": "下载阶段取消",
+          "name": "部分字节下载取消",
           "passed": true,
           "detail": {
-            "code": "ABORTED"
+            "code": "ABORTED",
+            "loadedBytes": 196608
           }
         },
         {
@@ -61585,9 +61606,9 @@
           "passed": true,
           "detail": {
             "modelDownloadMs": 0,
-            "modelCacheReadMs": 52.099999994039536,
-            "integrityMs": 90.70000000298023,
-            "sessionMs": 281.5
+            "modelCacheReadMs": 54.70000000298023,
+            "integrityMs": 88.29999999701977,
+            "sessionMs": 305.90000000596046
           }
         },
         {
@@ -61599,7 +61620,16 @@
           "passed": true
         },
         {
-          "name": "dispose取消提交",
+          "name": "dispose已提交run",
+          "passed": true,
+          "detail": {
+            "code": "ABORTED",
+            "sessionRunSubmitted": true,
+            "settledBeforeReturn": false
+          }
+        },
+        {
+          "name": "释放后新实例恢复",
           "passed": true
         },
         {
@@ -61615,10 +61645,11 @@
           "passed": true
         },
         {
-          "name": "下载阶段取消",
+          "name": "部分字节下载取消",
           "passed": true,
           "detail": {
-            "code": "ABORTED"
+            "code": "ABORTED",
+            "loadedBytes": 65536
           }
         },
         {
@@ -61652,10 +61683,11 @@
           "passed": true
         },
         {
-          "name": "Worker活动取消",
+          "name": "Worker已提交run取消",
           "passed": true,
           "detail": {
-            "code": "ABORTED"
+            "code": "ABORTED",
+            "sessionRunSubmitted": true
           }
         },
         {
@@ -61679,9 +61711,9 @@
           "passed": true,
           "detail": {
             "modelDownloadMs": 0,
-            "modelCacheReadMs": 55.80000001192093,
-            "integrityMs": 109.5,
-            "sessionMs": 1365.2000000029802
+            "modelCacheReadMs": 53.80000001192093,
+            "integrityMs": 102.79999999701977,
+            "sessionMs": 1224.3999999910593
           }
         },
         {
@@ -61693,7 +61725,16 @@
           "passed": true
         },
         {
-          "name": "dispose取消提交",
+          "name": "dispose已提交run",
+          "passed": true,
+          "detail": {
+            "code": "ABORTED",
+            "sessionRunSubmitted": true,
+            "settledBeforeReturn": true
+          }
+        },
+        {
+          "name": "释放后新实例恢复",
           "passed": true
         },
         {
@@ -61709,10 +61750,11 @@
           "passed": true
         },
         {
-          "name": "下载阶段取消",
+          "name": "部分字节下载取消",
           "passed": true,
           "detail": {
-            "code": "ABORTED"
+            "code": "ABORTED",
+            "loadedBytes": 65536
           }
         },
         {
@@ -61723,5 +61765,8 @@
     }
   ],
   "instrumentation": "测试服务器替换 ORT loader，调用原始 session.run 后捕获张量并记录实际原生GPU dispatch/submit。插桩包含传输开销，timings不作为产品性能。",
-  "modelRequests": 12
+  "lifecycleVerifiedAt": "2026-09-18T12:25:17.036Z",
+  "lifecycleInstrumentation": "真实session.run调用后暂缓向SDK返回结果；确认提交后才取消/释放。验证main等待结果、Worker立即终止，不宣称中断同步WASM内核。",
+  "modelRequests": 12,
+  "lifecycleModelRequests": 16
 }

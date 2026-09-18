@@ -16,7 +16,11 @@
 
 ## 生命周期与数值边界
 
-四模式共68项生命周期检查通过，包括错误输入/阈值、BUSY、立即取消、Worker活动取消及恢复、缓存写入/再次完整性验证、未load调用、load预取消、dispose取消与重复释放、错误SHA/URL、下载取消、当前和全缓存清理。run取消为协作取消，等待已提交计算后丢弃结果；Worker的dispose立即终止。主线程不能保证定时取消打断同步WASM内核。
+四模式共72项生命周期检查通过，包括错误输入/阈值、BUSY、立即取消、Worker已提交run取消及恢复、缓存写入/再次完整性验证、未load调用、load预取消、dispose取消与重复释放、错误SHA/URL、部分字节下载取消、当前和全缓存清理。run取消为协作取消，等待已提交计算后丢弃结果；Worker的dispose立即终止。主线程不能保证定时取消打断同步WASM内核。
+
+审查后加强了在途验证：测试包装器调用真实session.run后发出提交信号并暂缓返回，确认该信号后才dispose；main需等待结果释放，Worker在结果返回前结束，四模式释放后均可新建会话继续推理。下载实际收到65,536或196,608字节后才取消。该门控证明已提交操作的生命周期语义，不证明同步WASM仍在计算或被中断。图片质量捕获保持原批次，补跑时间单独记录在lifecycleVerifiedAt。
+
+对照报告绑定当前浏览器执行、数据清单和同张量参考清单的SHA-256；复核拒绝旧比较结果与新执行报告混用。[篡改回归](evidence-binding-regression.json)在隔离副本分别修改三份来源之一，全部被拒绝。
 
 缓存进度由公共回调报告 reading、miss、hit、invalid；hit仅在字节数和SHA通过后发出，miss包含缓存API不可用。三项事件顺序回归先红后绿，覆盖缺失/不可用、有效命中和损坏恢复；未通过验收前不会把损坏缓存标为命中。
 
@@ -28,7 +32,7 @@ ONNX物理输出名与语义名不同，SDK按固定张量形状映射scores/rbo
 
 ## 环境与耗时
 
-Windows 10.0.26200、Chromium 153.0.8010.12、ORT Web 1.27.0、Intel i5-10400F。GPU记录为NVIDIA blackwell、非软件fallback；main和Worker每次真实推理均记录296次原生compute dispatch和GPUQueue提交。该证据证明实际GPU执行，不承诺全部节点在GPU。
+Windows 11 10.0.26200、Chromium 153.0.8010.12、ORT Web 1.27.0、Intel i5-10400F。[宿主设备回读](host-environment.json)确认NVIDIA GeForce RTX 5060 Ti、驱动32.0.16.1692。浏览器GPU记录为NVIDIA blackwell、非软件fallback；main和Worker每次真实推理均记录296次原生compute dispatch和GPUQueue提交。该证据证明实际GPU执行，不承诺全部节点在GPU。
 
 [未插桩性能记录](performance.json)使用同一密集P0861 RGBA图片，已加载会话、三次热运行中位数：
 

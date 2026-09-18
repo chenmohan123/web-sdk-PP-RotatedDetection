@@ -93,6 +93,9 @@ for mode in execution['modes']:
         print(row['backend'], row['executionMode'], row['id'], row['inputKind'], row['endToEnd'], flush=True)
 passed = len(rows) == 40 and execution['status'] == 'executed' and all(r['endToEnd']['passed'] and (not captured or r['sameTensor']['passed']) for r in rows)
 output = {'status': 'passed' if passed else 'failed', 'verifiedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    'evidence': {'browserExecutionSha256': sha(REPORT / 'browser-execution.json'),
+                 'datasetSha256': sha(REPORT / 'dataset.lock.json'),
+                 'capturedReferenceSha256': sha(REPORT / 'captured-reference.json') if captured else None},
     'thresholds': {'minimumPolygonIoU': .995, 'maximumScoreError': .001, 'maximumCornerErrorPx': .1, 'sameCountAndClasses': True},
     'scope': '图片端到端严格对照；同张量参考另行报告。不是全量DOTA mAP。', 'rows': rows}
 (REPORT / 'comparison.json').write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')

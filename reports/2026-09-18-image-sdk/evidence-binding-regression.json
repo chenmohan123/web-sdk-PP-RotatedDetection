@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-09-18T12:28:23.542Z",
+  "status": "passed",
+  "scope": "隔离副本修改三个来源文件之一，保留旧comparison，验证复核必须失败",
+  "checks": [
+    {
+      "file": "browser-execution.json",
+      "rejected": true,
+      "diagnostic": "AssertionError [ERR_ASSERTION]: 对照未绑定当前浏览器执行报告\r"
+    },
+    {
+      "file": "dataset.lock.json",
+      "rejected": true,
+      "diagnostic": "AssertionError [ERR_ASSERTION]: 对照未绑定当前数据清单\r"
+    },
+    {
+      "file": "captured-reference.json",
+      "rejected": true,
+      "diagnostic": "AssertionError [ERR_ASSERTION]: 对照未绑定当前同张量参考\r"
+    }
+  ]
+}

@@ -8,6 +8,9 @@ const root=fileURLToPath(new URL('../../',import.meta.url)),report=path.join(roo
 const read=async f=>JSON.parse(await readFile(f,'utf8'));
 const sha=async f=>createHash('sha256').update(await readFile(f)).digest('hex');
 const execution=await read(path.join(report,'browser-execution.json')),comparison=await read(path.join(report,'comparison.json')),dataset=await read(path.join(report,'dataset.lock.json'));
+assert.equal(comparison.evidence?.browserExecutionSha256,await sha(path.join(report,'browser-execution.json')),'对照未绑定当前浏览器执行报告');
+assert.equal(comparison.evidence?.datasetSha256,await sha(path.join(report,'dataset.lock.json')),'对照未绑定当前数据清单');
+assert.equal(comparison.evidence?.capturedReferenceSha256,await sha(path.join(report,'captured-reference.json')),'对照未绑定当前同张量参考');
 assert.equal(execution.status,'executed');assert.equal(comparison.status,'passed');assert.equal(execution.modes.length,4);assert.equal(comparison.rows.length,40);
 assert.equal(await sha(path.join(root,'dist/index.js')),execution.sdkSha256);assert.equal(await sha(path.join(root,'dist/inference.worker.js')),execution.workerSha256);
 assert.equal(await sha(path.join(root,'.tmp/model.onnx')),execution.model.sha256);

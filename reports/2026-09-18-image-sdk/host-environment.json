@@ -1,0 +1,12 @@
+{
+  "verifiedAt": "2026-09-18T12:26:14.5449495Z",
+  "os": {
+    "caption": "Microsoft Windows 11 专业版",
+    "version": "10.0.26200"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5060 Ti",
+    "driverVersion": "32.0.16.1692"
+  },
+  "scope": "宿主设备信息；实际浏览器GPU执行另见browser-execution.json"
+}
