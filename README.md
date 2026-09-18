@@ -4,19 +4,27 @@
 
 浏览器端单帧旋转框检测 SDK，基于 PP-YOLOE-R-s FP32，识别 DOTA 15 类遥感目标。返回原图坐标系的四点框；CPU/WASM、GPU/WebGPU 和 main/Worker 均调用同一框架无关公共 API。
 
-**0.1.0 本地候选，尚未发布。** ModelScope（默认）与 Hugging Face 模型源尚未上传；正式 Demo 禁用检测，本地开发可使用校验通过的固定模型。
+**0.1.0 发布准备。** npm、GitHub Release 与 HTTPS Demo 的上线结论以 `reports/2026-09-18-release/` 的实际回执为准。模型使用 [固定来源清单](models/model.json)：默认 ModelScope，可显式选择 Hugging Face，失败不会静默换源。
 
-## 本地安装与运行
+## 安装与集成
+
+```powershell
+pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false add web-sdk-pp-rotated-detection@0.1.0
+```
+
+该命令面向正式版本；首次发布完成前请从源码构建。按 [快速开始](docs/zh-CN/quick-start.md) 复制 Worker/ORT 静态资源并传入固定模型对象，即可在浏览器使用公共 API。
+
+## 源码运行
 
 ```powershell
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false install --frozen-lockfile
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build
-pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false dev:local
+pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false dev
 ```
 
-先按 [快速开始](docs/zh-CN/quick-start.md) 将固定模型放到 `.tmp/model.onnx`，再打开 http://127.0.0.1:4192。普通 `dev` 和 `build:demo` 不启用本地模型。npm 发布后的安装命令为 `pnpm add web-sdk-pp-rotated-detection@0.1.0`，目前不可作为已上线安装入口。
+打开 http://127.0.0.1:4192。普通 `dev` 和 `build:demo` 使用清单中的 Hub 来源；`dev:local` 是可选的离线开发方式，需自行准备校验通过的 `.tmp/model.onnx`，不会进入正式构建。
 
-## 项目入口（计划地址，未发布）
+## 项目入口
 
 - [GitHub](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection)
 - [npm](https://www.npmjs.com/package/web-sdk-pp-rotated-detection)
@@ -42,4 +50,4 @@ pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versi
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false test:browser
 ```
 
-浏览器测试还需本地模型和 `.tmp/evaluation/images/P0861.png`（不分发评估图），并先用 `pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false exec playwright install chromium` 安装 Chromium；已有浏览器可设 `PLAYWRIGHT_BROWSERS_PATH` 复用。模型大小、许可证及 SHA-256 见 [清单](sdk-manifest.yaml)。当前 `assets: []` 有意保留待分发缺项，标准检查仍有 CONFIG-001 及其清单失效级联项，不能声称可发布或已合规。
+浏览器测试还需本地模型和 `.tmp/evaluation/images/P0861.png`（不分发评估图），并先用 `pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false exec playwright install chromium` 安装 Chromium；已有浏览器可设 `PLAYWRIGHT_BROWSERS_PATH` 复用。模型大小、许可证及 SHA-256 见 [清单](sdk-manifest.yaml)。CI、Pages 和 Release 均运行 `node scripts/check-release-ready.mjs`，检查双源与真实生产浏览器回执；离线标准检查不证明远程治理或部署已完成。

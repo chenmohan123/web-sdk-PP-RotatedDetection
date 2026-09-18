@@ -4,19 +4,27 @@
 
 A framework-neutral browser SDK for single-image rotated object detection with PP-YOLOE-R-s FP32 and 15 DOTA aerial classes. Results contain four polygon corners in original-image coordinates. CPU/WASM, GPU/WebGPU, main thread and Worker use the same public API.
 
-**0.1.0 is a local candidate, not a published release.** ModelScope (default) and Hugging Face assets have not been uploaded. Production inference is disabled until sources exist; explicit local development uses the verified fixed model.
+**0.1.0 release preparation.** npm, GitHub Release and HTTPS Demo availability is established by actual receipts in `reports/2026-09-18-release/`. Models use the [fixed source manifest](models/model.json): ModelScope by default, with explicit Hugging Face selection and no silent source fallback.
 
-## Local setup
+## Installation and integration
+
+```powershell
+pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false add web-sdk-pp-rotated-detection@0.1.0
+```
+
+This command targets the published version; build from source until the first publication completes. Follow [Quick start](docs/en/quick-start.md) to copy Worker/ORT static assets and supply the fixed model object to the browser API.
+
+## Run from source
 
 ```powershell
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false install --frozen-lockfile
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build
-pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false dev:local
+pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false dev
 ```
 
-Prepare `.tmp/model.onnx` as described in [Quick start](docs/en/quick-start.md), then open http://127.0.0.1:4192. Plain `dev` and `build:demo` do not enable the local model. After publication, installation will be `pnpm add web-sdk-pp-rotated-detection@0.1.0`; this is not currently a live installation route.
+Open http://127.0.0.1:4192. Plain `dev` and `build:demo` use the manifest Hub sources. Optional `dev:local` supports offline development with a verified `.tmp/model.onnx`; the local model never enters production builds.
 
-## Planned destinations (not published)
+## Project links
 
 [GitHub](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection) · [npm](https://www.npmjs.com/package/web-sdk-pp-rotated-detection) · [Demo](https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/)
 
@@ -40,4 +48,4 @@ pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versi
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false test:browser
 ```
 
-Browser checks need the local model and `.tmp/evaluation/images/P0861.png`, which is not redistributed. Install Chromium first with `pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false exec playwright install chromium`, or reuse an existing installation via `PLAYWRIGHT_BROWSERS_PATH`. See [manifest](sdk-manifest.yaml) for identity, license, size and SHA-256. Empty assets intentionally retain CONFIG-001 and resulting invalid-manifest cascade failures until model distribution exists; release readiness and compliance are not claimed.
+Browser checks need the local model and `.tmp/evaluation/images/P0861.png`, which is not redistributed. Install Chromium first with `pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false exec playwright install chromium`, or reuse an existing installation via `PLAYWRIGHT_BROWSERS_PATH`. See [manifest](sdk-manifest.yaml) for identity, license, size and SHA-256. CI, Pages and Release all run `node scripts/check-release-ready.mjs` to check both sources and actual production-browser receipts. Offline standard checks do not establish remote governance or deployment completion.

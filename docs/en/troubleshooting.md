@@ -4,7 +4,7 @@
 
 | Symptom/code | Action |
 | --- | --- |
-| Model sources unpublished | Expected production-preview state; wait for real Hub assets or use maintainer dev:local |
+| Model sources unpublished | Check for an outdated or incomplete model.json; use the release manifest with fixed revisions rather than inventing Hub URLs |
 | DOWNLOAD / INTEGRITY | Check the selected source, CORS, bytes and SHA; do not bypass integrity checks |
 | UNSUPPORTED | Check HTTPS/localhost and WebGPU adapter/browser; manually select CPU if needed |
 | SESSION / INFERENCE | Retain error code, browser, model SHA and mode; use matching colocated ORT files |

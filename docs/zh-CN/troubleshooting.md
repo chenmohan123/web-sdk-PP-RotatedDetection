@@ -4,7 +4,7 @@
 
 | 现象/代码 | 处理 |
 | --- | --- |
-| 模型来源尚未发布 | 当前生产预览预期状态；等待双Hub真实资产，维护者使用dev:local |
+| 模型来源尚未发布 | 检查是否使用旧版或不完整的 model.json；使用固定 revision 的正式清单，不自行猜测 Hub URL |
 | DOWNLOAD / INTEGRITY | 核对所选来源、CORS、固定bytes/SHA；不要改校验值绕过错误 |
 | UNSUPPORTED | 检查HTTPS/localhost、WebGPU适配器和浏览器；可手动选择CPU |
 | SESSION / INFERENCE | 保留错误码、浏览器、模型SHA和运行方式；确认ORT同版本同级资源 |

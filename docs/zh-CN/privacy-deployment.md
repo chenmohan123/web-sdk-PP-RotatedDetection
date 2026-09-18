@@ -14,4 +14,4 @@ pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versi
 
 预览地址http://127.0.0.1:4194。部署demo-dist，保留sdk目录、ES模块MIME和WASM MIME。推荐HTTPS及同源Worker/ORT；跨域模型必须允许CORS。
 
-生产构建不含权重、测试图、本地URL，未发布来源时禁用推理。仅显式dev-local/vanilla-local开发服务器读取.tmp/model.onnx。GitHub Pages工作流是准备骨架，尚未部署，远程保护/Pages/HTTPS需后续API核验。
+生产构建不含权重、测试图或本地模型 URL；模型按清单从显式选择的 Hub 下载。仅显式 dev-local/vanilla-local 开发服务器读取 `.tmp/model.onnx`。Pages 工作流从受保护 main 构建，经 `node scripts/check-release-ready.mjs` 验证双源与生产回执后上传产物；部署使用 github-pages 环境、最小权限和串行并发组。远程保护、Pages Source、HTTPS 与成功部署均需 API 回执验证，当前发布状态见 [发布指南](release.md)。

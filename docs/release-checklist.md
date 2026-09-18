@@ -1,21 +1,23 @@
 # 发布检查清单
 
-当前为0.1.0本地候选，未执行任何远程发布。根据标准模板逐项记录。
+当前为 0.1.0 发布准备。根据标准模板逐项记录；远程完成状态以 `reports/2026-09-18-release/` 的真实回执为准，不能凭工作流文件勾选。
 
 - [x] 中文默认README、英文README及双语七组指南。
 - [x] 测试、类型检查、SDK与Demo构建、npm产物检查。
-- [x] CI包含测试/类型/构建/模型身份检查；没有已上线CI记录声明。
+- [x] CI 包含测试、双类型检查、双构建、包检查与真实发布门禁。
 - [x] 模型身份、SHA、许可依据、桌面验证条件和已知限制。
-- [x] CHANGELOG与带门禁的Release/Pages工作流骨架。
+- [x] CHANGELOG 与带门禁的 Release/Pages 工作流；首版 prepare、publish、verify-only 模式。
 - [ ] 上传ModelScope与Hugging Face，验证不可变revision、bytes、SHA及CORS。
-- [ ] 填真实sources、assets，消除CONFIG-001。
-- [ ] 远程GitHub/npm/在线Demo实际可达；目前只是计划地址。
+- [ ] 填真实 sources、assets，清零本地 required 失败。
+- [ ] 两来源 × WASM/WebGPU × main/Worker 的生产浏览器回执，确认下载、校验与显式失败不换源。
+- [ ] 远程 GitHub/npm/在线 Demo 实际可达并有独立回执。
 - [ ] 默认分支Ruleset：PR、最新CI、会话解决、禁止删除/强推。
 - [ ] v*标签Ruleset：禁止更新/删除；最小绕过权限。
 - [ ] GitHub About、Homepage、topics与不可变GitHub Release。
 - [ ] 受保护来源HTTPS部署、Actions Pages、github-pages环境、并发与最小权限。
 - [ ] 通过远程API记录Ruleset、环境、部署标识、观测值和日期，不含凭据。
-- [ ] 发布npm并验证安装；权重/评估图不得进入Git/npm/Demo。
+- [ ] 从 prepare 产物首次发布 npm，以 verify-only 校验同一 tarball 的 dist.integrity 和安装；权重/评估图不得进入 Git/npm/Demo。
+- [ ] 配置限定本仓库 release.yml/npm 环境的 Trusted Publisher，再设置 NPM_TRUSTED_READY=true。
 - [ ] sdk:check无required失败，远程required全部验证后再宣称compliant。
 
-本地候选不能因为workflow存在就声称发布完成。
+GitHub Release 必须在 npm 完整性验证通过后创建；既有版本不覆盖，既有标签不移动。
