@@ -1,0 +1,26 @@
+{
+  "verifiedAt": "2026-09-18T15:03:01Z",
+  "status": "configured",
+  "package": "web-sdk-pp-rotated-detection",
+  "verificationMethod": "npm registry 返回 HTTP 201；响应中的配置数量、provider、repository、workflow_ref.file 和 environment 逐项断言通过。随后本地权限完全相等断言因服务端多返回 createStagedPackage 而失败，实际创建已成功。",
+  "httpStatus": 201,
+  "provider": "github",
+  "repository": "chenmohan123/web-sdk-PP-RotatedDetection",
+  "workflowFilename": "release.yml",
+  "environment": "npm",
+  "requestedPermissions": ["createPackage"],
+  "returnedPermissions": ["createPackage", "createStagedPackage"],
+  "evidence": {
+    "responseLog": "npm-trust-response.log",
+    "responseVerifier": "npm-trust-response-verifier.cjs",
+    "sourceCliVersion": "12.0.2",
+    "localProcessExitCode": 1,
+    "localFailure": "权限完全相等断言比 npm 服务端返回的规范化权限更严格；不是 HTTP 创建失败。",
+    "configurationId": "未保留，不推测",
+    "independentGetPerformed": false
+  },
+  "oidcPublicationVerified": false,
+  "initialVersion": "0.1.0",
+  "initialVersionHasProvenance": false,
+  "boundary": "服务端已保存固定发布绑定；首版由本机发布，实际 OIDC 新版本发布与 provenance 生成留待下一正式版本验证。未重发首版，也未创建测试版本。"
+}

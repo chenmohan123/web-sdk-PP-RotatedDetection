@@ -32,9 +32,9 @@
 
 - [x] 建立公开`chenmohan123/web-sdk-PP-RotatedDetection`，以已有设计基线初始化main；配置无bypass的默认分支与tag Rulesets、About/topics/Pages环境。
 - [x] 通过PR引入已审查产品与发布配置，等待最新CI通过后合并，记录PR与提交。Pages从受保护main部署。
-- [ ] 首次npm发布使用当前登录，若npm强制用户安全验证则提供当前链接并继续其他独立工作；配置限定本仓库release.yml/npm环境的Trusted Publishing。
+- [x] 首次npm发布使用当前登录，若npm强制用户安全验证则提供当前链接并继续其他独立工作；配置限定本仓库release.yml/npm环境的Trusted Publishing。
 - [x] 发布不可变v0.1.0、运行发布工作流并核对npm包完整性/安装/浏览器、GitHub Release、线上Demo双源及远程治理回执。
-- [ ] 更新最终双语发布状态/清单与回执，经PR合并；保持本地工作树干净，保留运行预览与必要验证资料。
+- [x] 更新最终双语发布状态/清单与回执，经PR合并；保持本地工作树干净，保留运行预览与必要验证资料。
 
 ## 计划核查
 

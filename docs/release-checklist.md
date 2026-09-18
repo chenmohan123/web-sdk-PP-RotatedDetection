@@ -17,7 +17,9 @@
 - [x] 受保护来源HTTPS部署、Actions Pages、github-pages环境、并发与最小权限。
 - [x] 通过远程API记录Ruleset、环境、部署标识、观测值和日期，不含凭据。
 - [x] 从 prepare 产物首次发布 npm，以 verify-only 校验同一 tarball 的 dist.integrity 和安装；权重/评估图不得进入 Git/npm/Demo。
-- [ ] 配置限定本仓库 release.yml/npm 环境的 Trusted Publisher，再设置 NPM_TRUSTED_READY=true。
+- [x] 配置限定本仓库 release.yml/npm 环境的 Trusted Publisher，再设置 NPM_TRUSTED_READY=true。
 - [x] sdk:check无required失败，远程required全部验证后再宣称compliant。
 
 GitHub Release 必须在 npm 完整性验证通过后创建；既有版本不覆盖，既有标签不移动。
+
+Trusted Publisher 配置以 npm HTTP 201 创建响应和字段核验为依据，开关有独立 GitHub API 回读。首版无 provenance；下一正式版本再验证实际 OIDC 发布，不为验证创建额外版本。
