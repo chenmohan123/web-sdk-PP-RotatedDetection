@@ -6,6 +6,9 @@ const input = document.querySelector<HTMLInputElement>("#image")!;
 const output = document.querySelector<HTMLElement>("#result")!;
 const run = document.querySelector<HTMLButtonElement>("#run")!;
 let sdk: RotatedDetection | undefined, controller: AbortController | undefined;
+input.addEventListener("change", () => {
+  output.textContent = "";
+});
 document.querySelector("#cancel")!.addEventListener("click", () => {
   controller?.abort();
   void sdk?.dispose();
@@ -26,6 +29,7 @@ run.addEventListener("click", async () => {
   const c = new AbortController();
   controller = c;
   run.disabled = true;
+  input.disabled = true;
   try {
     const api: typeof import("../../src/index") = await import(
       /* @vite-ignore */ new URL("sdk/index.js", document.baseURI).href
@@ -51,6 +55,7 @@ run.addEventListener("click", async () => {
     sdk = undefined;
     controller = undefined;
     run.disabled = false;
+    input.disabled = false;
   }
 });
 window.addEventListener("pagehide", () => {

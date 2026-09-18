@@ -6,18 +6,20 @@ import assert from "node:assert/strict";
 const root = process.cwd(),
   evidence = path.join(root, ".tmp/task2-ui");
 await mkdir(evidence, { recursive: true });
-const local = await createServer({
-  configFile: path.join(root, "demo/vite.config.ts"),
-  mode: "dev-local",
-});
-await local.listen();
+const vanillaOnly = process.argv.includes("--vanilla-only");
+const local = vanillaOnly
+  ? undefined
+  : await createServer({
+      configFile: path.join(root, "demo/vite.config.ts"),
+      mode: "dev-local",
+    });
+await local?.listen();
 const production = await preview({
   configFile: path.join(root, "demo/vite.config.ts"),
 });
 const browser = await chromium.launch({ channel: "chromium", headless: true });
 const errors = [],
   checks = [];
-const vanillaOnly = process.argv.includes("--vanilla-only");
 const vanilla = await createServer({
   configFile: path.join(root, "demo/vite.config.ts"),
   mode: "vanilla-local",
@@ -184,14 +186,19 @@ try {
     .locator("input[type=file]")
     .setInputFiles(path.join(root, ".tmp/evaluation/images/P0861.png"));
   await plain.getByRole("button", { name: "开始检测", exact: true }).click();
+  assert(await plain.locator("input[type=file]").isDisabled());
   await plain.waitForFunction(
     () =>
       document.querySelector("#result")?.textContent?.includes('"detections"'),
+    undefined,
     { timeout: 120000 },
   );
   const plainResult = JSON.parse(await plain.locator("#result").textContent());
   assert.equal(plainResult.runtime.actualBackend, "wasm");
   assert.equal(plainResult.detections.length, 136);
+  await plain.waitForFunction(() => !document.querySelector("#image").disabled);
+  await plain.locator("input[type=file]").setInputFiles([]);
+  assert.equal(await plain.locator("#result").textContent(), "");
   await plain.close();
   const prod = await browser.newPage();
   prod.on("pageerror", (error) => errors.push(error.message));
@@ -233,6 +240,8 @@ try {
     vanilla: {
       backend: plainResult.runtime.actualBackend,
       count: plainResult.detections.length,
+      inputDisabledWhileRunning: true,
+      selectionClearsResult: true,
     },
     errors,
   };
@@ -243,7 +252,7 @@ try {
   console.log(JSON.stringify(report, null, 2));
 } finally {
   await browser.close();
-  await local.close();
+  await local?.close();
   await vanilla.close();
   production.httpServer.close();
 }
