@@ -74,4 +74,4 @@ Open http://127.0.0.1:4192. Plain `dev` and `build:demo` use actual Hub sources,
 
 Optional offline development: place the same fixed model at `.tmp/model.onnx`, run `Get-FileHash .tmp/model.onnx -Algorithm SHA256` to match the SHA above and confirm 33,161,415 bytes, then run `pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false dev:local`. Only explicit local development modes expose local weights; production builds copy neither weights nor local URLs.
 
-[Vanilla](../../examples/vanilla/README.md) uses optional local-model mode `dev:vanilla` on port 4193; [React](../../examples/react/README.md) uses the full Demo.
+[Vanilla](../../examples/vanilla/README.md) uses `dev:vanilla` to load the pinned default ModelScope source on port 4193; optional `dev:vanilla:local` uses the verified `.tmp/model.onnx`. [React](../../examples/react/README.md) uses the full Demo.

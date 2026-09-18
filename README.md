@@ -4,7 +4,7 @@
 
 浏览器端单帧旋转框检测 SDK，基于 PP-YOLOE-R-s FP32，识别 DOTA 15 类遥感目标。返回原图坐标系的四点框；CPU/WASM、GPU/WebGPU 和 main/Worker 均调用同一框架无关公共 API。
 
-**0.1.0 发布准备。** npm、GitHub Release 与 HTTPS Demo 的上线结论以 `reports/2026-09-18-release/` 的实际回执为准。模型使用 [固定来源清单](models/model.json)：默认 ModelScope，可显式选择 Hugging Face，失败不会静默换源。
+**版本 0.1.0。** npm、GitHub Release 与 HTTPS Demo 的状态见 [发布与验收回执](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/tree/main/reports/2026-09-18-release)。模型使用 [固定来源清单](models/model.json)：默认 ModelScope，可显式选择 Hugging Face，失败不会静默换源。
 
 ## 安装与集成
 
@@ -12,7 +12,7 @@
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false add web-sdk-pp-rotated-detection@0.1.0
 ```
 
-该命令面向正式版本；首次发布完成前请从源码构建。按 [快速开始](docs/zh-CN/quick-start.md) 复制 Worker/ORT 静态资源并传入固定模型对象，即可在浏览器使用公共 API。
+按 [快速开始](docs/zh-CN/quick-start.md) 复制 Worker/ORT 静态资源并传入固定模型对象，即可在浏览器使用公共 API；也可按下方步骤从源码构建。
 
 ## 源码运行
 

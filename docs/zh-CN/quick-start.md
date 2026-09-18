@@ -74,4 +74,4 @@ pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versi
 
 可选离线开发：把同一固定模型放在 `.tmp/model.onnx`，运行 `Get-FileHash .tmp/model.onnx -Algorithm SHA256` 确认与上述 SHA 相同且长度为 33,161,415 字节，再运行 `pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false dev:local`。只有显式 local 开发模式提供本地权重，正式构建不复制权重或本地 URL。
 
-[Vanilla](../../examples/vanilla/README.md) 使用可选本地模型模式 `dev:vanilla`，端口 4193；[React](../../examples/react/README.md) 复用完整 Demo。
+[Vanilla](../../examples/vanilla/README.md) 使用 `dev:vanilla` 从默认 ModelScope 固定来源加载模型，端口 4193；可选 `dev:vanilla:local` 使用已校验的 `.tmp/model.onnx`。[React](../../examples/react/README.md) 复用完整 Demo。

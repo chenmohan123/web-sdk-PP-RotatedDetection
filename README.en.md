@@ -4,7 +4,7 @@
 
 A framework-neutral browser SDK for single-image rotated object detection with PP-YOLOE-R-s FP32 and 15 DOTA aerial classes. Results contain four polygon corners in original-image coordinates. CPU/WASM, GPU/WebGPU, main thread and Worker use the same public API.
 
-**0.1.0 release preparation.** npm, GitHub Release and HTTPS Demo availability is established by actual receipts in `reports/2026-09-18-release/`. Models use the [fixed source manifest](models/model.json): ModelScope by default, with explicit Hugging Face selection and no silent source fallback.
+**Version 0.1.0.** See [release and acceptance receipts](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/tree/main/reports/2026-09-18-release) for npm, GitHub Release and HTTPS Demo status. Models use the [fixed source manifest](models/model.json): ModelScope by default, with explicit Hugging Face selection and no silent source fallback.
 
 ## Installation and integration
 
@@ -12,7 +12,7 @@ A framework-neutral browser SDK for single-image rotated object detection with P
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false add web-sdk-pp-rotated-detection@0.1.0
 ```
 
-This command targets the published version; build from source until the first publication completes. Follow [Quick start](docs/en/quick-start.md) to copy Worker/ORT static assets and supply the fixed model object to the browser API.
+Follow [Quick start](docs/en/quick-start.md) to copy Worker/ORT static assets and supply the fixed model object to the browser API, or build from source using the steps below.
 
 ## Run from source
 
