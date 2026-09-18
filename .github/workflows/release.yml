@@ -1,0 +1,158 @@
+name: 正式发布
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 已存在的不可变版本标签（例如 v0.1.0）
+        required: true
+        type: string
+      mode:
+        description: 准备首版产物、Trusted Publishing 发布或验证本机已发布版本
+        required: true
+        type: choice
+        options: [prepare, publish, verify-only]
+        default: prepare
+permissions:
+  contents: read
+concurrency:
+  group: rotated-detection-release
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    outputs:
+      mode: ${{ steps.identity.outputs.mode }}
+      commit: ${{ steps.identity.outputs.commit }}
+    env:
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+      RELEASE_MODE: ${{ inputs.mode || (vars.NPM_TRUSTED_READY == 'true' && 'publish' || 'prepare') }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref_name }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: 校验不可变标签与 main 祖先关系
+        id: identity
+        run: |
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          tag_commit=$(git rev-parse "refs/tags/$RELEASE_TAG^{commit}")
+          test "$tag_commit" = "$(git rev-parse HEAD)"
+          git merge-base --is-ancestor "$tag_commit" origin/main
+          echo "commit=$tag_commit" >> "$GITHUB_OUTPUT"
+          echo "mode=$RELEASE_MODE" >> "$GITHUB_OUTPUT"
+      - uses: pnpm/action-setup@v4
+        with: { version: 11.21.0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: "24", cache: pnpm }
+      - name: 校验 npm 包名与标签版本
+        run: |
+          node --input-type=module -e 'import {readFileSync} from "node:fs"; import assert from "node:assert/strict"; const p=JSON.parse(readFileSync("package.json","utf8")); assert.equal(p.name,"web-sdk-pp-rotated-detection"); assert.equal(`v${p.version}`,process.env.RELEASE_TAG);'
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false install --frozen-lockfile
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false test
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false typecheck
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false typecheck:demo
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build:demo
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false check:package
+      - run: node scripts/check-release-ready.mjs
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false pack --out package.tgz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-package
+          path: package.tgz
+          if-no-files-found: error
+  npm:
+    needs: verify
+    if: needs.verify.outputs.mode != 'prepare'
+    environment: npm
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+      RELEASE_MODE: ${{ needs.verify.outputs.mode }}
+    steps:
+      # 不设置 registry-url，避免 token 占位配置干扰 npm 的 OIDC 身份。
+      - uses: actions/setup-node@v4
+        with: { node-version: "24" }
+      - uses: actions/download-artifact@v4
+        with: { name: release-package }
+      - name: 使用 Trusted Publishing，或验证已发布首版
+        run: |
+          package_version="${RELEASE_TAG#v}"
+          package_spec="web-sdk-pp-rotated-detection@$package_version"
+          if npm view "$package_spec" version --json --registry=https://registry.npmjs.org > registry-version.json 2> registry-error.log; then
+            echo "此版本已发布，仅校验 npm 产物，不覆盖已有版本"
+          else
+            node --input-type=module -e 'import {readFileSync} from "node:fs"; const r=JSON.parse(readFileSync("registry-version.json","utf8")); if(!["E404","ENOVERSIONS"].includes(r.error?.code)) throw new Error("npm 查询失败，不能将网络或权限错误当作版本不存在");'
+            if [ "$RELEASE_MODE" = 'verify-only' ]; then
+              echo '指定版本尚不存在，不能完成独立验证' >&2
+              exit 1
+            fi
+            npm publish package.tgz --provenance --access public --registry=https://registry.npmjs.org
+          fi
+          integrity_ready=false
+          poll_deadline=$((SECONDS + 600))
+          attempt=0
+          while [ "$SECONDS" -lt "$poll_deadline" ]; do
+            attempt=$((attempt + 1))
+            attempt_started=$SECONDS
+            remaining_seconds=$((poll_deadline - SECONDS))
+            query_timeout=$((remaining_seconds < 10 ? remaining_seconds : 10))
+            if timeout "${query_timeout}s" npm view "$package_spec" dist.integrity --json --registry=https://registry.npmjs.org > published-integrity.tmp 2>/dev/null \
+              && node --input-type=module -e 'import {readFileSync} from "node:fs"; const value=JSON.parse(readFileSync(process.argv[1],"utf8")); const prefix="sha512-"; if(typeof value!=="string" || !value.startsWith(prefix)) process.exit(1); const encoded=value.slice(prefix.length); const digest=Buffer.from(encoded,"base64"); if(digest.length!==64 || digest.toString("base64")!==encoded) process.exit(1)' published-integrity.tmp; then
+              mv published-integrity.tmp published-integrity.json
+              integrity_ready=true
+              break
+            fi
+            rm -f published-integrity.tmp
+            remaining_seconds=$((poll_deadline - SECONDS))
+            if [ "$remaining_seconds" -le 0 ]; then
+              break
+            fi
+            sleep_seconds=$((attempt_started + 10 - SECONDS))
+            if [ "$sleep_seconds" -gt "$remaining_seconds" ]; then
+              sleep_seconds=$remaining_seconds
+            fi
+            if [ "$sleep_seconds" -gt 0 ]; then
+              echo "npm 元数据尚未可见，${sleep_seconds} 秒后重试 dist.integrity（第 ${attempt} 次）"
+              sleep "$sleep_seconds"
+            fi
+          done
+          if [ "$integrity_ready" != true ]; then
+            echo "npm 版本在 10 分钟内仍未返回有效 dist.integrity" >&2
+            exit 1
+          fi
+          node --input-type=module -e 'import {readFileSync} from "node:fs"; import {createHash} from "node:crypto"; import assert from "node:assert/strict"; const actual="sha512-"+createHash("sha512").update(readFileSync("package.tgz")).digest("base64"); assert.equal(JSON.parse(readFileSync("published-integrity.json","utf8")),actual,"npm 产物与已验收打包产物不一致")'
+  release:
+    needs: [verify, npm]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.verify.outputs.commit }}
+          persist-credentials: false
+      - uses: actions/github-script@v7
+        env:
+          RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+          RELEASE_COMMIT: ${{ needs.verify.outputs.commit }}
+        with:
+          script: |
+            const fs = require('fs');
+            const tag = process.env.RELEASE_TAG;
+            const resolved = await github.rest.repos.getCommit({...context.repo, ref: `refs/tags/${tag}`});
+            if (resolved.data.sha !== process.env.RELEASE_COMMIT) throw new Error('标签与已验收提交不同，停止发布');
+            const body = fs.readFileSync('CHANGELOG.md', 'utf8');
+            try {
+              const existing = await github.rest.repos.getReleaseByTag({...context.repo, tag});
+              await github.rest.repos.updateRelease({...context.repo, release_id: existing.data.id, draft: false, body});
+            } catch (error) {
+              if (error.status !== 404) throw error;
+              await github.rest.repos.createRelease({...context.repo, tag_name: tag, name: tag, draft: false, body});
+            }

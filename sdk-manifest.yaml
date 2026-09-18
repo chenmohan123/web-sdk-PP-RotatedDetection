@@ -1,0 +1,92 @@
+schemaVersion: "1.1.0"
+id: pp-rotated-detection
+name: PP-RotatedDetection
+summary: 浏览器端 PP-YOLOE-R-s 单帧旋转框检测 SDK，输出 DOTA 15 类目标及原图四点坐标。
+package:
+  name: web-sdk-pp-rotated-detection
+  version: 0.1.0
+# 模型分发已完成；npm/Demo上线回执见reports/2026-09-18-release。
+repository: https://github.com/chenmohan123/web-sdk-PP-RotatedDetection
+demo:
+  url: https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/
+  defaultLanguage: zh-CN
+  framework: react
+  localProcessing: true
+docs:
+  zhCN: docs/zh-CN/quick-start.md
+  en: docs/en/quick-start.md
+runtime:
+  backends: [wasm, webgpu]
+  executionModes: [main, worker]
+  actualBackendReported: true
+  runtimeVersion: onnxruntime-web@1.27.0
+model:
+  id: ppyoloe-r-s-1024-fp32
+  version: 0.1.0
+  format: onnx
+  parameterCount: 8243749
+  precision: [fp32]
+  source: https://github.com/PaddlePaddle/PaddleDetection/tree/b25522a0f4bde8c80603f3ba5e3472059972e3b5/configs/rotate/ppyoloe_r
+  license: Apache-2.0，归因与权重许可依据见 models/README.md
+  defaultVariant: ppyoloe-r-s-1024-fp32
+  defaultSource: modelscope
+  assets:
+    - id: ppyoloe-r-s-1024-fp32
+      bytes: 33161415
+      precision: fp32
+      url: https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+      sha256: de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089
+  variants:
+    - id: ppyoloe-r-s-1024-fp32
+      precision: fp32
+      quantization: null
+      opset: 17
+      bytes: 33161415
+      parameterCount: 8243749
+      backends: [wasm, webgpu]
+      sources:
+        - kind: modelscope
+          repository: chenmohan/web-sdk-pp-rotated-detection
+          revision: 20632e3f350c664c2f88ea56b68bca0fe8a03349
+          path: ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+          downloadUrl: https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+          bytes: 33161415
+          sha256: de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089
+        - kind: huggingface
+          repository: chenmohan/web-sdk-pp-rotated-detection
+          revision: 5ee386be20104afcc334e83ace6a5db048a00593
+          path: ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+          downloadUrl: https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+          bytes: 33161415
+          sha256: de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089
+performance:
+  timings: [modelDownloadMs, modelCacheReadMs, integrityMs, sessionMs, decodeMs, preprocessMs, inferenceMs, postprocessMs, totalMs]
+  coldStartDefined: true
+  warmRunDefined: true
+cache:
+  storage: [indexeddb]
+  versionedKeys: true
+  clearCurrent: true
+  clearAll: true
+  estimate: true
+examples:
+  vanilla: {status: available, path: examples/vanilla}
+  react: {status: available, path: examples/react}
+  vite: {status: available, path: examples/vite}
+  vue: {status: unsupported}
+  cdn: {status: unsupported}
+  wechatWebView: {status: unsupported}
+verification:
+  environments:
+    - browser: Chromium 153.0.8010.12，main 与 Worker
+      os: Windows 11 10.0.26200
+      device: Intel Core i5-10400F
+      testedAt: "2026-09-18"
+      backend: wasm
+      runtimeVersion: onnxruntime-web@1.27.0
+    - browser: Chromium 153.0.8010.12，main 与 Worker
+      os: Windows 11 10.0.26200
+      device: NVIDIA GeForce RTX 5060 Ti，驱动 32.0.16.1692
+      testedAt: "2026-09-18"
+      backend: webgpu
+      runtimeVersion: onnxruntime-web@1.27.0

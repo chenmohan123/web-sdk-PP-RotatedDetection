@@ -1,0 +1,150 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-09-18T13:20:05.415500+00:00",
+  "model": {
+    "bytes": 33161415,
+    "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+  },
+  "results": [
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "url": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/conversion.json",
+      "path": "ppyoloe-r-s-1024/0.1.0/conversion.json",
+      "bytes": 2434,
+      "sha256": "351a265ddb4e809a64972a88e094562cacd0b75c7091c9419d3eed1dbea27540",
+      "verifiedAt": "2026-09-18T13:19:36.799271+00:00",
+      "passed": true
+    },
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "url": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/LICENSE",
+      "path": "ppyoloe-r-s-1024/0.1.0/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "verifiedAt": "2026-09-18T13:19:37.099306+00:00",
+      "passed": true
+    },
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "url": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/NOTICE",
+      "path": "ppyoloe-r-s-1024/0.1.0/NOTICE",
+      "bytes": 5534,
+      "sha256": "4c1ee6f43040adcf6e7c6493c9b3a4095fdeb7e31510ba329a07313eb0a1d79c",
+      "verifiedAt": "2026-09-18T13:19:37.396027+00:00",
+      "passed": true
+    },
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "url": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+      "path": "ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+      "bytes": 33161415,
+      "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089",
+      "verifiedAt": "2026-09-18T13:19:40.002049+00:00",
+      "passed": true
+    },
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "url": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/README.en.md",
+      "path": "ppyoloe-r-s-1024/0.1.0/README.en.md",
+      "bytes": 3061,
+      "sha256": "6a24bfb42d53f24fb08ffe4dec055367c7e36de17cfb3ef7fe51cd316a703a64",
+      "verifiedAt": "2026-09-18T13:19:40.309944+00:00",
+      "passed": true
+    },
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "url": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/README.md",
+      "path": "ppyoloe-r-s-1024/0.1.0/README.md",
+      "bytes": 2972,
+      "sha256": "508efb7600d7b7a759cbf154f1760da80f8abbce90906874491310122b5f514b",
+      "verifiedAt": "2026-09-18T13:19:40.577748+00:00",
+      "passed": true
+    },
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "url": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/README.md",
+      "path": "README.md",
+      "bytes": 878,
+      "sha256": "60a067c4a71762f36f3eed6a4b10dcee76c9cb706a2d19601762791f31fc0f4c",
+      "verifiedAt": "2026-09-18T13:19:40.854770+00:00",
+      "passed": true
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "url": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/conversion.json",
+      "path": "ppyoloe-r-s-1024/0.1.0/conversion.json",
+      "bytes": 2434,
+      "sha256": "351a265ddb4e809a64972a88e094562cacd0b75c7091c9419d3eed1dbea27540",
+      "verifiedAt": "2026-09-18T13:19:42.377602+00:00",
+      "passed": true
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "url": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/LICENSE",
+      "path": "ppyoloe-r-s-1024/0.1.0/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "verifiedAt": "2026-09-18T13:19:43.187472+00:00",
+      "passed": true
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "url": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/NOTICE",
+      "path": "ppyoloe-r-s-1024/0.1.0/NOTICE",
+      "bytes": 5534,
+      "sha256": "4c1ee6f43040adcf6e7c6493c9b3a4095fdeb7e31510ba329a07313eb0a1d79c",
+      "verifiedAt": "2026-09-18T13:19:43.996293+00:00",
+      "passed": true
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "url": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+      "path": "ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+      "bytes": 33161415,
+      "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089",
+      "verifiedAt": "2026-09-18T13:20:02.621266+00:00",
+      "passed": true
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "url": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/README.en.md",
+      "path": "ppyoloe-r-s-1024/0.1.0/README.en.md",
+      "bytes": 3061,
+      "sha256": "6a24bfb42d53f24fb08ffe4dec055367c7e36de17cfb3ef7fe51cd316a703a64",
+      "verifiedAt": "2026-09-18T13:20:03.537104+00:00",
+      "passed": true
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "url": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/README.md",
+      "path": "ppyoloe-r-s-1024/0.1.0/README.md",
+      "bytes": 2972,
+      "sha256": "508efb7600d7b7a759cbf154f1760da80f8abbce90906874491310122b5f514b",
+      "verifiedAt": "2026-09-18T13:20:04.504478+00:00",
+      "passed": true
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "url": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/README.md",
+      "path": "README.md",
+      "bytes": 878,
+      "sha256": "60a067c4a71762f36f3eed6a4b10dcee76c9cb706a2d19601762791f31fc0f4c",
+      "verifiedAt": "2026-09-18T13:20:05.415500+00:00",
+      "passed": true
+    }
+  ]
+}

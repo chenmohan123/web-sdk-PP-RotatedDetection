@@ -1,0 +1,326 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-09-18T12:08:29.858Z",
+  "environment": {
+    "browser": "153.0.8010.12",
+    "os": "10.0.26200",
+    "cpu": "Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz"
+  },
+  "imageId": "P0861",
+  "sdkSha256": "f065b0114ff690274c99b2706f46a49d06cb815a3b0a2126e98799a56e9ffbf9",
+  "modes": [
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "load": {
+        "modelDownloadMs": 296.5,
+        "modelCacheReadMs": 4.399999991059303,
+        "integrityMs": 100,
+        "sessionMs": 1052.3999999910593
+      },
+      "first": {
+        "count": 136,
+        "timings": {
+          "decodeMs": 1.300000011920929,
+          "preprocessMs": 285.1000000089407,
+          "inferenceMs": 2325.5,
+          "postprocessMs": 198.59999999403954,
+          "totalMs": 2811.1000000089407
+        }
+      },
+      "warm": [
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 10.400000005960464,
+            "preprocessMs": 252,
+            "inferenceMs": 2161.5,
+            "postprocessMs": 121.29999999701977,
+            "totalMs": 2545.2999999970198
+          },
+          "runtime": {
+            "requestedBackend": "wasm",
+            "actualBackend": "wasm",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "main"
+          }
+        },
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 0.9000000059604645,
+            "preprocessMs": 237.90000000596046,
+            "inferenceMs": 2219.300000011921,
+            "postprocessMs": 118.8999999910593,
+            "totalMs": 2577.2000000029802
+          },
+          "runtime": {
+            "requestedBackend": "wasm",
+            "actualBackend": "wasm",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "main"
+          }
+        },
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 0.9000000059604645,
+            "preprocessMs": 241.8999999910593,
+            "inferenceMs": 2182.5,
+            "postprocessMs": 125.59999999403954,
+            "totalMs": 2551
+          },
+          "runtime": {
+            "requestedBackend": "wasm",
+            "actualBackend": "wasm",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "main"
+          }
+        }
+      ],
+      "median": {
+        "decodeMs": 0.9000000059604645,
+        "preprocessMs": 241.8999999910593,
+        "inferenceMs": 2182.5,
+        "postprocessMs": 121.29999999701977,
+        "totalMs": 2551
+      },
+      "errors": []
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "load": {
+        "modelDownloadMs": 0,
+        "modelCacheReadMs": 53.599999994039536,
+        "integrityMs": 91.40000000596046,
+        "sessionMs": 1065.6000000089407
+      },
+      "first": {
+        "count": 136,
+        "timings": {
+          "decodeMs": 1.2999999970197678,
+          "preprocessMs": 350.90000000596046,
+          "inferenceMs": 2528.2000000029802,
+          "postprocessMs": 143.40000000596046,
+          "totalMs": 3026.4000000059605
+        }
+      },
+      "warm": [
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 1,
+            "preprocessMs": 255,
+            "inferenceMs": 2448.9000000059605,
+            "postprocessMs": 129.79999999701977,
+            "totalMs": 2837.5
+          },
+          "runtime": {
+            "requestedBackend": "wasm",
+            "actualBackend": "wasm",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "worker"
+          }
+        },
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 0.7000000029802322,
+            "preprocessMs": 251.70000000298023,
+            "inferenceMs": 2391.6000000089407,
+            "postprocessMs": 135.79999999701977,
+            "totalMs": 2781.4000000059605
+          },
+          "runtime": {
+            "requestedBackend": "wasm",
+            "actualBackend": "wasm",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "worker"
+          }
+        },
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 1.0999999940395355,
+            "preprocessMs": 241.20000000298023,
+            "inferenceMs": 2280.7999999970198,
+            "postprocessMs": 133.90000000596046,
+            "totalMs": 2670.7000000029802
+          },
+          "runtime": {
+            "requestedBackend": "wasm",
+            "actualBackend": "wasm",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "worker"
+          }
+        }
+      ],
+      "median": {
+        "decodeMs": 1,
+        "preprocessMs": 251.70000000298023,
+        "inferenceMs": 2391.6000000089407,
+        "postprocessMs": 133.90000000596046,
+        "totalMs": 2781.4000000059605
+      },
+      "errors": []
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "load": {
+        "modelDownloadMs": 0,
+        "modelCacheReadMs": 55.6000000089407,
+        "integrityMs": 93.5,
+        "sessionMs": 1521.8999999910593
+      },
+      "first": {
+        "count": 136,
+        "timings": {
+          "decodeMs": 1.2000000029802322,
+          "preprocessMs": 349.09999999403954,
+          "inferenceMs": 1092.1000000089407,
+          "postprocessMs": 171.09999999403954,
+          "totalMs": 1614.2000000029802
+        }
+      },
+      "warm": [
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 0.9000000059604645,
+            "preprocessMs": 238.09999999403954,
+            "inferenceMs": 34.5,
+            "postprocessMs": 125,
+            "totalMs": 398.59999999403954
+          },
+          "runtime": {
+            "requestedBackend": "webgpu",
+            "actualBackend": "webgpu",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "main"
+          }
+        },
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 0.800000011920929,
+            "preprocessMs": 234,
+            "inferenceMs": 41.3999999910593,
+            "postprocessMs": 114.70000000298023,
+            "totalMs": 390.90000000596046
+          },
+          "runtime": {
+            "requestedBackend": "webgpu",
+            "actualBackend": "webgpu",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "main"
+          }
+        },
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 0.9000000059604645,
+            "preprocessMs": 232.5,
+            "inferenceMs": 34.099999994039536,
+            "postprocessMs": 124.79999999701977,
+            "totalMs": 392.29999999701977
+          },
+          "runtime": {
+            "requestedBackend": "webgpu",
+            "actualBackend": "webgpu",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "main"
+          }
+        }
+      ],
+      "median": {
+        "decodeMs": 0.9000000059604645,
+        "preprocessMs": 234,
+        "inferenceMs": 34.5,
+        "postprocessMs": 124.79999999701977,
+        "totalMs": 392.29999999701977
+      },
+      "errors": []
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "load": {
+        "modelDownloadMs": 0,
+        "modelCacheReadMs": 54.20000000298023,
+        "integrityMs": 94.5,
+        "sessionMs": 1247
+      },
+      "first": {
+        "count": 136,
+        "timings": {
+          "decodeMs": 1.5999999940395355,
+          "preprocessMs": 323.19999998807907,
+          "inferenceMs": 1158.6000000089407,
+          "postprocessMs": 178.29999999701977,
+          "totalMs": 1664.5999999940395
+        }
+      },
+      "warm": [
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 1,
+            "preprocessMs": 594.6000000089407,
+            "inferenceMs": 38,
+            "postprocessMs": 133.79999999701977,
+            "totalMs": 770.3000000119209
+          },
+          "runtime": {
+            "requestedBackend": "webgpu",
+            "actualBackend": "webgpu",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "worker"
+          }
+        },
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 0.7000000029802322,
+            "preprocessMs": 225.90000000596046,
+            "inferenceMs": 34.30000001192093,
+            "postprocessMs": 114.59999999403954,
+            "totalMs": 376.79999999701977
+          },
+          "runtime": {
+            "requestedBackend": "webgpu",
+            "actualBackend": "webgpu",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "worker"
+          }
+        },
+        {
+          "count": 136,
+          "timings": {
+            "decodeMs": 0.699999988079071,
+            "preprocessMs": 224.59999999403954,
+            "inferenceMs": 34.1000000089407,
+            "postprocessMs": 132.69999998807907,
+            "totalMs": 393.5
+          },
+          "runtime": {
+            "requestedBackend": "webgpu",
+            "actualBackend": "webgpu",
+            "runtimeVersion": "onnxruntime-web@1.27.0",
+            "executionMode": "worker"
+          }
+        }
+      ],
+      "median": {
+        "decodeMs": 0.7000000029802322,
+        "preprocessMs": 225.90000000596046,
+        "inferenceMs": 34.30000001192093,
+        "postprocessMs": 132.69999998807907,
+        "totalMs": 393.5
+      },
+      "errors": []
+    }
+  ],
+  "scope": "单台桌面，已加载会话，同一RGBA图片三次热运行中位数；不含模型加载，非摄像头FPS或普遍性能。所有SDK阶段保持原始实现，无张量捕获插桩。"
+}

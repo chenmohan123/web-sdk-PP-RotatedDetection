@@ -1,0 +1,53 @@
+name: 部署 Demo
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false install --frozen-lockfile
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build:demo
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false check:package
+      - run: node scripts/check-release-ready.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: demo-dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 阻止旧运行覆盖最新 Demo
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const latest = await github.rest.git.getRef({...context.repo, ref: 'heads/main'});
+            if (latest.data.object.sha !== context.sha) {
+              core.setFailed('当前运行已落后于 main，停止部署以保留最新 Demo。');
+            }
+      - uses: actions/deploy-pages@v4
+        id: deployment

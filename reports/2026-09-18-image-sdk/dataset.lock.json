@@ -1,0 +1,208 @@
+{
+  "status": "prepared",
+  "preparedAt": "2026-09-18T11:42:08.785857+00:00",
+  "upstreamRevision": "b25522a0f4bde8c80603f3ba5e3472059972e3b5",
+  "sources": [
+    {
+      "path": "demo/P0072__1.0__0___0.png",
+      "sha256": "8ec9093d3b3ea72d578453b06497e35c4f7e62e0f0d8443d80f4c44af44d6c77"
+    },
+    {
+      "path": "demo/P0861__1.0__1154___824.png",
+      "sha256": "a58b94a1bc149eae55ed852c742d839b6f5902d81a053cb72868c91254adea32"
+    }
+  ],
+  "reference": "固定Paddle原网络/官方角点/Shapely旋转NMS，阈值.1/.1；无GT或mAP评估",
+  "licenseScope": "上游DOTA示例仅本地评估，不随Git、npm或Demo发布",
+  "cases": [
+    {
+      "id": "P0072",
+      "width": 948,
+      "height": 934,
+      "transform": "固定上游原图",
+      "scaleFactor": [
+        1.0801687240600586,
+        1.0801687240600586
+      ],
+      "resizedWidth": 1024,
+      "resizedHeight": 1009,
+      "imageFile": "images/P0072.png",
+      "imageSha256": "8ec9093d3b3ea72d578453b06497e35c4f7e62e0f0d8443d80f4c44af44d6c77",
+      "rgbaFile": "rgba/P0072.rgba",
+      "rgbaSha256": "1a2751d910400c0647e56415cc979a13a99091277781e0b000246d4b7b9edcc5",
+      "inputFile": "inputs/P0072.f32",
+      "inputSha256": "2af1e2a58d511e65fb5d693cab37bc11f86b9c903df9692068abce1e4fe575f8",
+      "referenceFile": "reference/P0072.npz",
+      "referenceSha256": "b3c52e1d2f6fd2cc8f3fee91d116d296bbd0470b867fddc2f407587a95e156ee",
+      "referenceCount": 8
+    },
+    {
+      "id": "P0861",
+      "width": 1024,
+      "height": 1024,
+      "transform": "固定上游原图",
+      "scaleFactor": [
+        1.0,
+        1.0
+      ],
+      "resizedWidth": 1024,
+      "resizedHeight": 1024,
+      "imageFile": "images/P0861.png",
+      "imageSha256": "a58b94a1bc149eae55ed852c742d839b6f5902d81a053cb72868c91254adea32",
+      "rgbaFile": "rgba/P0861.rgba",
+      "rgbaSha256": "f6d4a34bc00dfb1e5d69671f9ed571a29dd6978f49317aa5d0376b968fba2d8a",
+      "inputFile": "inputs/P0861.f32",
+      "inputSha256": "41f6599298bd8077c4d61ed52c77ec1507187b31ec88bc3863994e01302c4916",
+      "referenceFile": "reference/P0861.npz",
+      "referenceSha256": "2dc909eacd91610ab8a03c4b04552be25a77fa03b5bafaf7711944b60e7e4b2a",
+      "referenceCount": 136
+    },
+    {
+      "id": "P0072-rot90",
+      "width": 934,
+      "height": 948,
+      "transform": "顺时针旋转90度",
+      "scaleFactor": [
+        1.0801687240600586,
+        1.0801687240600586
+      ],
+      "resizedWidth": 1009,
+      "resizedHeight": 1024,
+      "imageFile": "images/P0072-rot90.png",
+      "imageSha256": "bdf3f0963773e13947717900ba7330c3f88c185951580ed127629bbe3f495bf6",
+      "rgbaFile": "rgba/P0072-rot90.rgba",
+      "rgbaSha256": "1f8edc96b8c76fa8c645f745afe6a9f6e8dd24c23cb64706b213aaf6dffba70a",
+      "inputFile": "inputs/P0072-rot90.f32",
+      "inputSha256": "a90e5d78f6e1d76c6c72a1cb6f483f26bfb3588ab6bcdc1f1ee9ea4098c1cd64",
+      "referenceFile": "reference/P0072-rot90.npz",
+      "referenceSha256": "6df7bacadbb24c42a9746c56aad70a752318581a499ce34dc77e5b922c21a0d6",
+      "referenceCount": 13
+    },
+    {
+      "id": "P0861-crop",
+      "width": 768,
+      "height": 1024,
+      "transform": "左侧768像素裁剪",
+      "scaleFactor": [
+        1.0,
+        1.0
+      ],
+      "resizedWidth": 768,
+      "resizedHeight": 1024,
+      "imageFile": "images/P0861-crop.png",
+      "imageSha256": "31c99cf70426dad85181e08839e3989ed44a4b36a29bbec4ad37ff4dc829d582",
+      "rgbaFile": "rgba/P0861-crop.rgba",
+      "rgbaSha256": "42063239f4d45c1079ff48eff19b8a10f4b693ef099f8cabf4a37c8a2754420e",
+      "inputFile": "inputs/P0861-crop.f32",
+      "inputSha256": "f675e23e77c6a8ba1b54d5de8e1e0c6263721877fc530e35508a668f5c15b506",
+      "referenceFile": "reference/P0861-crop.npz",
+      "referenceSha256": "54455e72ba112fb49702029574ac92cf829f3b91e37568669055f2b77bcf5b6d",
+      "referenceCount": 129
+    },
+    {
+      "id": "blank",
+      "width": 1024,
+      "height": 1024,
+      "transform": "纯黑负例",
+      "scaleFactor": [
+        1.0,
+        1.0
+      ],
+      "resizedWidth": 1024,
+      "resizedHeight": 1024,
+      "imageFile": "images/blank.png",
+      "imageSha256": "0533c09d9b7b24ad1c636cffff184d4bc66b08686fe6314881d43b17136476b2",
+      "rgbaFile": "rgba/blank.rgba",
+      "rgbaSha256": "4571a45562870efcbcbaacbe46976b780a3be00a4b3651d8a0a3329e6f38ac3b",
+      "inputFile": "inputs/blank.f32",
+      "inputSha256": "5cda5b497b8191eedf612a4faf02f912545f2742a77f1e06c9b3a1d45ec6508b",
+      "referenceFile": "reference/blank.npz",
+      "referenceSha256": "2fac29585d0aa33a6179bcbae9810a4336b8453414020cf05657fd4281510501",
+      "referenceCount": 0
+    },
+    {
+      "id": "P0072-641x513",
+      "width": 641,
+      "height": 513,
+      "transform": "奇数尺寸缩小641×513",
+      "scaleFactor": [
+        1.597503900527954,
+        1.597503900527954
+      ],
+      "resizedWidth": 1024,
+      "resizedHeight": 820,
+      "imageFile": "images/P0072-641x513.png",
+      "imageSha256": "57768142178d578f27903fadb2dbf451ab01d1becd33a4203e94775d53c09765",
+      "rgbaFile": "rgba/P0072-641x513.rgba",
+      "rgbaSha256": "88420e33df114d0ef9869852689804bf3867b14d3ce4e8ddefa241687caee269",
+      "inputFile": "inputs/P0072-641x513.f32",
+      "inputSha256": "1a7e773a6657a70aae819b1bb65e77e5fd11ebba33e974ba639b752757f5b77b",
+      "referenceFile": "reference/P0072-641x513.npz",
+      "referenceSha256": "260ff20ccebdb99a44e76b0ec37bf37720494622f5fabff5cb81fbbc75da5f37",
+      "referenceCount": 9
+    },
+    {
+      "id": "P0861-1537x769",
+      "width": 1537,
+      "height": 769,
+      "transform": "非整数比例1537×769",
+      "scaleFactor": [
+        0.6662329435348511,
+        0.6662329435348511
+      ],
+      "resizedWidth": 1024,
+      "resizedHeight": 512,
+      "imageFile": "images/P0861-1537x769.png",
+      "imageSha256": "3ce1601ed22159b2bab1b9625a02e3e260d8b92c9563f607e2d68831bbbfd428",
+      "rgbaFile": "rgba/P0861-1537x769.rgba",
+      "rgbaSha256": "3d59158419e20950bdab5501dcd29da7aefcaab59d61c8d8d0ea91624ae3b677",
+      "inputFile": "inputs/P0861-1537x769.f32",
+      "inputSha256": "d42258d755a6b46bcf5686967724478989c3ad01d953a8077d947879c1e55e67",
+      "referenceFile": "reference/P0861-1537x769.npz",
+      "referenceSha256": "9607c9d6e10e22e73451de049f1005e9970415386ba343991f23b156a24902c3",
+      "referenceCount": 116
+    },
+    {
+      "id": "P0072-tall",
+      "width": 257,
+      "height": 1537,
+      "transform": "细长257×1537",
+      "scaleFactor": [
+        0.6662329435348511,
+        0.6662329435348511
+      ],
+      "resizedWidth": 171,
+      "resizedHeight": 1024,
+      "imageFile": "images/P0072-tall.png",
+      "imageSha256": "df6cd8268b00e31c6cacdde305eded7420546bf05d0be4ea7e8015da645fd70f",
+      "rgbaFile": "rgba/P0072-tall.rgba",
+      "rgbaSha256": "2867acabe09852e26f312106a5a8879b1021bfc3709a44367dfc284bacea7c16",
+      "inputFile": "inputs/P0072-tall.f32",
+      "inputSha256": "19bc2422edaea8a1f56cdf1fa3c033f9b2e05382395428259150a0c39f782035",
+      "referenceFile": "reference/P0072-tall.npz",
+      "referenceSha256": "3138a992d29c6182d33a44074b208b9df2966617ed0beb767bd52f934f354978",
+      "referenceCount": 3
+    },
+    {
+      "id": "white-wide",
+      "width": 4096,
+      "height": 1,
+      "transform": "极宽单行合成负例，最小输出尺寸钳制到1",
+      "scaleFactor": [
+        0.25,
+        0.25
+      ],
+      "resizedWidth": 1024,
+      "resizedHeight": 1,
+      "imageFile": "images/white-wide.png",
+      "imageSha256": "374f0ff663689ca91e22b98311891a70f36dc4ba822290071ce3e12b5a89bfd0",
+      "rgbaFile": "rgba/white-wide.rgba",
+      "rgbaSha256": "0fbba07a833d4dcfc7024eaf313661a0ba8f80a05c6d29b8801c612e10e60dee",
+      "inputFile": "inputs/white-wide.f32",
+      "inputSha256": "116432f60c99e1685b19a578a51839b972aa050f50391120bb475792f90c5f83",
+      "referenceFile": "reference/white-wide.npz",
+      "referenceSha256": "c7d061b911130df71daa978bed82310731ae5c1cd6d7250356e85ece6378af1f",
+      "referenceCount": 0
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-18T13:31:44.140Z",
+  "browser": "153.0.8010.12",
+  "checks": [],
+  "productionSourceAvailability": "published",
+  "productionLocalUrlAbsent": true,
+  "vanilla": {
+    "backend": "wasm",
+    "count": 136,
+    "inputDisabledWhileRunning": true,
+    "selectionClearsResult": true
+  },
+  "errors": []
+}

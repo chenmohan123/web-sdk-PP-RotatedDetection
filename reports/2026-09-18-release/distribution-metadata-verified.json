@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-09-18T13:24:32.937946+00:00",
+  "model": {
+    "bytes": 33161415,
+    "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+  },
+  "results": [
+    {
+      "source": "modelscope",
+      "revision": "a7bed9383cd34d8d90ebab28ee6143a2376e184a",
+      "url": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/a7bed9383cd34d8d90ebab28ee6143a2376e184a/ppyoloe-r-s-1024/0.1.0/model.json",
+      "path": "ppyoloe-r-s-1024/0.1.0/model.json",
+      "bytes": 1415,
+      "sha256": "e698358f5f3c7f42cd575eb943c32212569404d7ef0abcdf85a40c4c5b1f9bb8",
+      "verifiedAt": "2026-09-18T13:24:31.971842+00:00",
+      "passed": true
+    },
+    {
+      "source": "huggingface",
+      "revision": "2dcfc9d69bae358a78814588b8e489257b8fabc0",
+      "url": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/2dcfc9d69bae358a78814588b8e489257b8fabc0/ppyoloe-r-s-1024/0.1.0/model.json",
+      "path": "ppyoloe-r-s-1024/0.1.0/model.json",
+      "bytes": 1415,
+      "sha256": "e698358f5f3c7f42cd575eb943c32212569404d7ef0abcdf85a40c4c5b1f9bb8",
+      "verifiedAt": "2026-09-18T13:24:32.937946+00:00",
+      "passed": true
+    }
+  ]
+}

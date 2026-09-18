@@ -1,0 +1,47 @@
+{
+  "verifiedAt": "2026-09-18T13:16:05.797010+00:00",
+  "upstreamRevision": "b25522a0f4bde8c80603f3ba5e3472059972e3b5",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "snapshot": "upstream/LICENSE.gz",
+      "url": "https://github.com/PaddlePaddle/PaddleDetection/blob/b25522a0f4bde8c80603f3ba5e3472059972e3b5/LICENSE"
+    },
+    {
+      "path": "configs/rotate/ppyoloe_r/README.md",
+      "bytes": 11299,
+      "sha256": "c29689bc7df28888127712a1ce1d4b6c8411a975cdee157a8e100f5a0fabf00d",
+      "snapshot": "upstream/configs/rotate/ppyoloe_r/README.md.gz",
+      "url": "https://github.com/PaddlePaddle/PaddleDetection/blob/b25522a0f4bde8c80603f3ba5e3472059972e3b5/configs/rotate/ppyoloe_r/README.md"
+    }
+  ],
+  "weight": {
+    "id": "ppyoloe_r_crn_s_3x_dota",
+    "config": "configs/rotate/ppyoloe_r/ppyoloe_r_crn_s_3x_dota.yml",
+    "url": "https://paddledet.bj.bcebos.com/models/ppyoloe_r_crn_s_3x_dota.pdparams",
+    "status": 200,
+    "bytes": 33111074,
+    "etag": "\"-4a0fc2130220082f8d19c0be9cca9601\"",
+    "lastModified": "Thu, 13 Oct 2022 07:10:16 GMT",
+    "sha256": "d9c4483c53a79bc8e8265f01beb044e060bb4bb017830befb046d2d504ec99a5",
+    "availableConfigurations": [
+      "ppyoloe_r_crn_l_3x_dota.yml",
+      "ppyoloe_r_crn_l_3x_dota_ms.yml",
+      "ppyoloe_r_crn_m_3x_dota.yml",
+      "ppyoloe_r_crn_m_3x_dota_ms.yml",
+      "ppyoloe_r_crn_s_3x_dota.yml",
+      "ppyoloe_r_crn_s_3x_dota_ms.yml",
+      "ppyoloe_r_crn_x_3x_dota.yml",
+      "ppyoloe_r_crn_x_3x_dota_ms.yml"
+    ]
+  },
+  "license": {
+    "sourceRepository": "Apache-2.0",
+    "weightLinkedByOfficialReadme": true,
+    "separateWeightLicenseFoundInReviewedFiles": false,
+    "scope": "以固定上游Apache-2.0项目声明和官方权重表为采用依据；独立权重文本缺失是解释边界，不增加额外授权门槛。"
+  },
+  "decision": "apache-2.0-supported-by-pinned-project-license-and-official-weight-table"
+}

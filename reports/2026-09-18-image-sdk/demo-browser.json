@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-18T12:24:15.924Z",
+  "browser": "153.0.8010.12",
+  "checks": [
+    {
+      "width": 1280,
+      "count": 136,
+      "backend": "webgpu",
+      "language": true,
+      "stableSelection": true,
+      "cacheHit": true,
+      "dragDrop": true,
+      "cancel": true,
+      "json": true,
+      "png": true,
+      "cache": true,
+      "invalidInput": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "count": 136,
+      "backend": "wasm",
+      "language": true,
+      "stableSelection": true,
+      "cacheHit": true,
+      "dragDrop": true,
+      "cancel": true,
+      "json": true,
+      "png": true,
+      "cache": true,
+      "invalidInput": true,
+      "overflow": false
+    }
+  ],
+  "productionUnpublished": true,
+  "productionLocalUrlAbsent": true,
+  "errors": []
+}
