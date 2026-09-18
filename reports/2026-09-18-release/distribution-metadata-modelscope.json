@@ -1,0 +1,15 @@
+{
+  "source": "modelscope",
+  "repository": "chenmohan/web-sdk-pp-rotated-detection",
+  "phase": "metadata",
+  "parent": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+  "revision": "a7bed9383cd34d8d90ebab28ee6143a2376e184a",
+  "uploadedAt": "2026-09-18T13:24:28.310551+00:00",
+  "files": [
+    {
+      "path": "ppyoloe-r-s-1024/0.1.0/model.json",
+      "bytes": 1415,
+      "sha256": "e698358f5f3c7f42cd575eb943c32212569404d7ef0abcdf85a40c4c5b1f9bb8"
+    }
+  ]
+}

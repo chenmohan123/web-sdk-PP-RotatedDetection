@@ -520,7 +520,11 @@ export default function App() {
               <div className="control-label model-label">
                 <span>{t.model}</span>
                 <span className="badge">
-                  {__LOCAL_MODEL__ ? t.development : "候选 / Candidate"}
+                  {__LOCAL_MODEL__
+                    ? t.development
+                    : metadata.status === "published"
+                      ? lang === "zh" ? "已发布" : "Published"
+                      : lang === "zh" ? "候选" : "Candidate"}
                 </span>
               </div>
               <div className="model-value">{t.subtitle}</div>

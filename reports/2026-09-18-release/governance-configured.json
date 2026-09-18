@@ -1,0 +1,211 @@
+{
+  "verifiedAt": "2026-09-18T13:20:10.2303362Z",
+  "repository": "chenmohan123/web-sdk-PP-RotatedDetection",
+  "repositoryMetadata": {
+    "defaultBranchRef": {
+      "name": "main"
+    },
+    "description": "浏览器端 PP-YOLOE-R 旋转框检测 SDK，支持 CPU/GPU、Worker、ModelScope 与 Hugging Face。",
+    "homepageUrl": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/",
+    "isPrivate": false,
+    "nameWithOwner": "chenmohan123/web-sdk-PP-RotatedDetection",
+    "repositoryTopics": [
+      {
+        "name": "onnx"
+      },
+      {
+        "name": "paddledetection"
+      },
+      {
+        "name": "rotated-object-detection"
+      },
+      {
+        "name": "typescript"
+      },
+      {
+        "name": "webgpu"
+      }
+    ],
+    "url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection"
+  },
+  "rulesets": [
+    {
+      "id": 23658518,
+      "name": "保护发布标签",
+      "target": "tag",
+      "source_type": "Repository",
+      "source": "chenmohan123/web-sdk-PP-RotatedDetection",
+      "enforcement": "active",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "refs/tags/v*"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "deletion"
+        },
+        {
+          "type": "update"
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5SAmFOzgFpABY",
+      "created_at": "2026-09-18T21:20:00.07+08:00",
+      "updated_at": "2026-09-18T21:20:00.096+08:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/rulesets/23658518"
+        },
+        "html": {
+          "href": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/rules/23658518"
+        }
+      }
+    },
+    {
+      "id": 23658516,
+      "name": "保护默认分支",
+      "target": "branch",
+      "source_type": "Repository",
+      "source": "chenmohan123/web-sdk-PP-RotatedDetection",
+      "enforcement": "active",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "~DEFAULT_BRANCH"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "deletion"
+        },
+        {
+          "type": "non_fast_forward"
+        },
+        {
+          "type": "pull_request",
+          "parameters": {
+            "required_approving_review_count": 0,
+            "dismiss_stale_reviews_on_push": true,
+            "required_reviewers": [],
+            "require_code_owner_review": false,
+            "require_last_push_approval": false,
+            "required_review_thread_resolution": true,
+            "require_extra_approval_for_unattributed_changes": true,
+            "allowed_merge_methods": [
+              "merge",
+              "squash",
+              "rebase"
+            ]
+          }
+        },
+        {
+          "type": "required_status_checks",
+          "parameters": {
+            "strict_required_status_checks_policy": true,
+            "do_not_enforce_on_create": false,
+            "required_status_checks": [
+              {
+                "context": "verify",
+                "integration_id": 15368
+              }
+            ]
+          }
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5SAmFOzgFpABQ",
+      "created_at": "2026-09-18T21:19:59.078+08:00",
+      "updated_at": "2026-09-18T21:19:59.179+08:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/rulesets/23658516"
+        },
+        "html": {
+          "href": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/rules/23658516"
+        }
+      }
+    }
+  ],
+  "pages": {
+    "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/pages",
+    "status": null,
+    "cname": null,
+    "custom_404": false,
+    "html_url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/",
+    "build_type": "workflow",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_enforced": true
+  },
+  "environments": {
+    "total_count": 2,
+    "environments": [
+      {
+        "id": 22229133556,
+        "node_id": "EN_kwDOUgJhTs8AAAAFLPWo9A",
+        "name": "github-pages",
+        "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/environments/github-pages",
+        "html_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/deployments/activity_log?environments_filter=github-pages",
+        "created_at": "2026-09-18T13:20:01Z",
+        "updated_at": "2026-09-18T13:20:01Z",
+        "can_admins_bypass": true,
+        "protection_rules": [
+          {
+            "id": 65985491,
+            "node_id": "GA_kwDOUgJhTs4D7tvT",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": true,
+          "custom_branch_policies": false
+        }
+      },
+      {
+        "id": 22229134423,
+        "node_id": "EN_kwDOUgJhTs8AAAAFLPWsVw",
+        "name": "npm",
+        "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/environments/npm",
+        "html_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/deployments/activity_log?environments_filter=npm",
+        "created_at": "2026-09-18T13:20:02Z",
+        "updated_at": "2026-09-18T13:20:02Z",
+        "can_admins_bypass": true,
+        "protection_rules": [
+          {
+            "id": 65985493,
+            "node_id": "GA_kwDOUgJhTs4D7tvV",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      }
+    ]
+  },
+  "npmDeploymentPolicies": {
+    "total_count": 1,
+    "branch_policies": [
+      {
+        "id": 60336589,
+        "node_id": "MDE2OkdhdGVCcmFuY2hQb2xpY3k2MDMzNjU4OQ==",
+        "name": "v*",
+        "type": "tag"
+      }
+    ]
+  }
+}

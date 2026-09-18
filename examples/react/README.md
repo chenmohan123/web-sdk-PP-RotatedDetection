@@ -4,9 +4,9 @@
 
 ```powershell
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build
-pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false dev:local
+pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false dev
 ```
 
-按 [快速开始](../../docs/zh-CN/quick-start.md) 准备本地模型，然后打开 http://127.0.0.1:4192。正式构建运行 `build:demo`，不含模型权重。
+打开 http://127.0.0.1:4192，默认从ModelScope加载模型。可选本地模式见[快速开始](../../docs/zh-CN/quick-start.md)。正式构建运行`build:demo`，不含模型权重。
 
-The complete React reference lives in [App.tsx](../../demo/src/App.tsx). Prepare the local model using [Quick start](../../docs/en/quick-start.md), run the commands above, and open http://127.0.0.1:4192. `build:demo` builds the production app without model weights.
+The complete React reference lives in [App.tsx](../../demo/src/App.tsx). Run the commands above and open http://127.0.0.1:4192; ModelScope is the default source. Optional local mode is documented in [Quick start](../../docs/en/quick-start.md). `build:demo` includes no model weights.

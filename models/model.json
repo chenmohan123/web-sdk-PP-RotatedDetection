@@ -1,7 +1,7 @@
 {
   "id": "ppyoloe-r-s-1024-fp32",
   "version": "0.1.0",
-  "status": "candidate",
+  "status": "published",
   "bytes": 33161415,
   "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089",
   "parameterCount": 8243749,
@@ -14,5 +14,24 @@
     1024
   ],
   "defaultSource": "modelscope",
-  "sources": []
+  "sources": [
+    {
+      "kind": "modelscope",
+      "repository": "chenmohan/web-sdk-pp-rotated-detection",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "path": "ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+      "downloadUrl": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+      "bytes": 33161415,
+      "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+    },
+    {
+      "kind": "huggingface",
+      "repository": "chenmohan/web-sdk-pp-rotated-detection",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "path": "ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+      "downloadUrl": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+      "bytes": 33161415,
+      "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+    }
+  ]
 }

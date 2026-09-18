@@ -5,6 +5,8 @@ import path from "node:path";
 import assert from "node:assert/strict";
 const root = process.cwd(),
   evidence = path.join(root, ".tmp/task2-ui");
+const publishedModel = JSON.parse(await readFile(path.join(root, "models/model.json"), "utf8"));
+const publishedSources = publishedModel.sources.length === 2;
 await mkdir(evidence, { recursive: true });
 const vanillaOnly = process.argv.includes("--vanilla-only");
 const local = vanillaOnly
@@ -22,7 +24,7 @@ const errors = [],
   checks = [];
 const vanilla = await createServer({
   configFile: path.join(root, "demo/vite.config.ts"),
-  mode: "vanilla-local",
+  mode: publishedSources ? "vanilla" : "vanilla-local",
   server: { port: 4193 },
 });
 await vanilla.listen();
@@ -203,24 +205,27 @@ try {
   const prod = await browser.newPage();
   prod.on("pageerror", (error) => errors.push(error.message));
   await prod.goto("http://127.0.0.1:4194/");
-  await prod.getByText("模型来源尚未发布", { exact: true }).waitFor();
+  if (!publishedSources)
+    await prod.getByText("模型来源尚未发布", { exact: true }).waitFor();
   await prod
     .locator("input[type=file]")
     .setInputFiles(path.join(root, ".tmp/evaluation/images/P0861.png"));
   await prod.waitForFunction(() => document.querySelector("canvas")?.width > 0);
-  assert(
+  assert.equal(
     await prod
       .getByRole("button", { name: "开始检测", exact: true })
       .isDisabled(),
+    !publishedSources,
   );
   await prod.locator("select").selectOption("huggingface");
-  assert(
+  assert.equal(
     await prod
       .getByRole("button", { name: "开始检测", exact: true })
       .isDisabled(),
+    !publishedSources,
   );
   await prod.screenshot({
-    path: path.join(evidence, "production-unpublished.png"),
+    path: path.join(evidence, publishedSources ? "production-published.png" : "production-unpublished.png"),
     fullPage: true,
   });
   const assets = await readdir(path.join(root, "demo-dist/assets"));
@@ -235,7 +240,7 @@ try {
     date: new Date().toISOString(),
     browser: browser.version(),
     checks,
-    productionUnpublished: true,
+    productionSourceAvailability: publishedSources ? "published" : "unpublished",
     productionLocalUrlAbsent: true,
     vanilla: {
       backend: plainResult.runtime.actualBackend,

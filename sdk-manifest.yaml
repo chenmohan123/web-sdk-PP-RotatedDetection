@@ -5,7 +5,7 @@ summary: 浏览器端 PP-YOLOE-R-s 单帧旋转框检测 SDK，输出 DOTA 15 �
 package:
   name: web-sdk-pp-rotated-detection
   version: 0.1.0
-# 以下仓库与 Demo 为计划地址，尚未发布；真实状态见 docs/zh-CN/release.md。
+# 模型分发已完成；npm/Demo上线回执见reports/2026-09-18-release。
 repository: https://github.com/chenmohan123/web-sdk-PP-RotatedDetection
 demo:
   url: https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/
@@ -30,8 +30,35 @@ model:
   license: Apache-2.0，归因与权重许可依据见 models/README.md
   defaultVariant: ppyoloe-r-s-1024-fp32
   defaultSource: modelscope
-  # 固定 bytes/SHA 见 models/model.json；双 Hub 尚未上传，保留 CONFIG-001。
-  assets: []
+  assets:
+    - id: ppyoloe-r-s-1024-fp32
+      bytes: 33161415
+      precision: fp32
+      url: https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+      sha256: de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089
+  variants:
+    - id: ppyoloe-r-s-1024-fp32
+      precision: fp32
+      quantization: null
+      opset: 17
+      bytes: 33161415
+      parameterCount: 8243749
+      backends: [wasm, webgpu]
+      sources:
+        - kind: modelscope
+          repository: chenmohan/web-sdk-pp-rotated-detection
+          revision: 20632e3f350c664c2f88ea56b68bca0fe8a03349
+          path: ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+          downloadUrl: https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+          bytes: 33161415
+          sha256: de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089
+        - kind: huggingface
+          repository: chenmohan/web-sdk-pp-rotated-detection
+          revision: 5ee386be20104afcc334e83ace6a5db048a00593
+          path: ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+          downloadUrl: https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx
+          bytes: 33161415
+          sha256: de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089
 performance:
   timings: [modelDownloadMs, modelCacheReadMs, integrityMs, sessionMs, decodeMs, preprocessMs, inferenceMs, postprocessMs, totalMs]
   coldStartDefined: true
@@ -45,7 +72,7 @@ cache:
 examples:
   vanilla: {status: available, path: examples/vanilla}
   react: {status: available, path: examples/react}
-  vite: {status: available, path: examples/react}
+  vite: {status: available, path: examples/vite}
   vue: {status: unsupported}
   cdn: {status: unsupported}
   wechatWebView: {status: unsupported}
