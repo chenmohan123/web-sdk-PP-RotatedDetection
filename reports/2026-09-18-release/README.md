@@ -51,3 +51,9 @@ PP-YOLOE-R-s单尺度1024 FP32，33,161,415字节，SHA-256 `de2f4c94061bda4bfaa
 [隔离npm安装](npm-install.json)从registry安装固定版本、复制实际安装包的dist资源，执行公共API和ModelScope真实下载。WASM/Worker与WebGPU/Worker均136框，模型身份与所有SDK静态资源摘要一致，无页面错误。验证脚本保存在本机`.tmp/npm-install-smoke.mjs`；本地评估图片不分发。
 
 [verify-only工作流](release-published.json)在不可变`v0.1.0` ref执行，再次比对registry与CI重建tarball完整性，所有job成功后创建[GitHub Release](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/releases/tag/v0.1.0)。没有覆盖npm版本或移动标签。[远程治理回读](governance-published.json)记录已生效的Rulesets、HTTPS Pages、环境和成功部署/Release证据。
+
+## Trusted Publishing 配置完成
+
+[配置回执](npm-trusted-publishing.json)记录 npm 返回 HTTP 201、固定仓库/工作流/环境字段断言通过的事实。npm 12.0.2 显式请求 `createPackage`，服务端返回 `createPackage` 与 `createStagedPackage`；本地脚本的权限完全相等断言因此退出1。该本地错误发生在远程保存之后，不代表创建失败；未重复提交。实际响应日志经过认证信息过滤，见[npm-trust-response.log](npm-trust-response.log)，字段核验逻辑快照见[npm-trust-response-verifier.cjs](npm-trust-response-verifier.cjs)。没有保存完整响应或配置ID，也没有另作GET，报告明确保留此证据边界。
+
+[GitHub开关回读](npm-trusted-ready.json)确认 `NPM_TRUSTED_READY=true`。绑定仅对应 `chenmohan123/web-sdk-PP-RotatedDetection` / `release.yml` / `npm`，配合既有环境 `v*` 标签策略，后续标签自动进入发布模式。首次0.1.0仍是本机账号发布，无 provenance；实际 OIDC 新版本发布及 provenance 生成留待下一正式版本，不通过额外版本测试。

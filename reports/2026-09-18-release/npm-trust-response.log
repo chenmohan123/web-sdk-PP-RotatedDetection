@@ -1,0 +1,19 @@
+14 http fetch POST 401 https://registry.npmjs.org/-/package/web-sdk-pp-rotated-detection/trust 695ms
+32 http fetch POST 201 https://registry.npmjs.org/-/package/web-sdk-pp-rotated-detection/trust 1536ms
+34 verbose stack AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+34 verbose stack + actual - expected
+34 verbose stack
+34 verbose stack   [
+34 verbose stack     'createPackage',
+34 verbose stack +   'createStagedPackage'
+34 verbose stack   ]
+34 verbose stack
+34 verbose stack     at F:\git\00_chenmohan\github\web-sdk-PP-RotatedDetection\.tmp\npm-trust-receipt.cjs:22:11
+34 verbose stack     at async otplease (F:\git\00_chenmohan\github\web-sdk-PP-RotatedDetection\.tmp\npm-trust-cli\node_modules\npm\lib\utils\auth.js:22:14)
+34 verbose stack     at async TrustGitHub.createConfigCommand (F:\git\00_chenmohan\github\web-sdk-PP-RotatedDetection\.tmp\npm-trust-cli\node_modules\npm\lib\trust-cmd.js:240:22)
+34 verbose stack     at async TrustGitHub.exec (F:\git\00_chenmohan\github\web-sdk-PP-RotatedDetection\.tmp\npm-trust-cli\node_modules\npm\lib\commands\trust\github.js:100:5)
+34 verbose stack     at async Npm.exec (F:\git\00_chenmohan\github\web-sdk-PP-RotatedDetection\.tmp\npm-trust-cli\node_modules\npm\lib\npm.js:194:9)
+34 verbose stack     at async module.exports (F:\git\00_chenmohan\github\web-sdk-PP-RotatedDetection\.tmp\npm-trust-cli\node_modules\npm\lib\cli\entry.js:67:5)
+35 error code ERR_ASSERTION
+36 error     'createPackage',
+36 error +   'createStagedPackage'

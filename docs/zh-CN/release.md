@@ -16,6 +16,8 @@
 | `publish` | 通过 npm 环境的 OIDC Trusted Publishing 发布；版本已存在时只比对 `dist.integrity`，不覆盖 |
 | `verify-only` | 验证维护者在本机发布的同一 tarball；版本不存在或 SHA-512 不同即失败；成功后创建/更新 GitHub Release |
 
-首版已从 `prepare` 运行35352403353下载 CI 产物，经本机 npm 身份验证发布**同一个 `package.tgz`**；随后在 `v0.1.0` ref执行 `verify-only` 运行35353954911，完整性通过后才创建 GitHub Release。手动发布工作流应选择标签 ref，以满足 npm 环境的 `v*` 标签策略。npm Trusted Publisher 的目标为 `chenmohan123/web-sdk-PP-RotatedDetection`、工作流 `release.yml`、环境 `npm`；保存成功后才设置 `NPM_TRUSTED_READY=true`，使后续 tag push 自动执行 `publish`。配置结果见本轮回执。工作流不保存 npm 长期令牌，也不使用 setup-node 的 registry-url token 占位配置。
+首版已从 `prepare` 运行35352403353下载 CI 产物，经本机 npm 身份验证发布**同一个 `package.tgz`**；随后在 `v0.1.0` ref执行 `verify-only` 运行35353954911，完整性通过后才创建 GitHub Release。手动发布工作流应选择标签 ref，以满足 npm 环境的 `v*` 标签策略。
+
+npm 已保存 Trusted Publisher：`chenmohan123/web-sdk-PP-RotatedDetection`、工作流 `release.yml`、环境 `npm`，返回的权限为直接发布与暂存发布。仓库变量 `NPM_TRUSTED_READY=true` 已设置并回读，后续 tag push 将自动执行 `publish`。创建配置需要 npm 12.0.2 的 `--allow-publish` 参数；旧版 CLI 缺少服务端要求的权限字段。服务端创建响应及本地校验边界见[配置回执](../../reports/2026-09-18-release/npm-trusted-publishing.json)。首版是本机发布，没有 provenance；实际 OIDC 新版本发布和 provenance 留待下一次正式版本验证。工作流不保存 npm 长期令牌，也不使用 setup-node 的 registry-url token 占位配置。
 
 模型来自 PaddleDetection 固定提交，Apache-2.0 采用依据与权重解释边界见 [模型卡](../../models/README.md)。仅 FP32、WASM/WebGPU、单帧图片；Git/npm/Demo 不含 ONNX、评估图或原始张量。桌面结果不能扩大成手机、NPU 或全量 DOTA mAP 承诺。离线 `sdk:check` 无 required 失败仅代表本地标准通过；远程 required 全部验证后才可声明 compliant。检查 [发布清单](../release-checklist.md)。
