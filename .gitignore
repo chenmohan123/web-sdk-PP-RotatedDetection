@@ -1,0 +1,10 @@
+node_modules/
+dist/
+demo-dist/
+.tmp/
+.superpowers/
+test-results/
+*.tgz
+*.onnx
+*.pdparams
+__pycache__/
