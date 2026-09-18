@@ -18,6 +18,9 @@ for(const row of comparison.rows){assert(row.endToEnd.passed);assert(row.sameTen
 assert(execution.lifecycle.every(mode=>mode.tests.every(t=>t.passed)));
 const captured=await read(path.join(report,'captured-reference.json'));assert.equal(captured.status,'passed');assert.equal(captured.rows.length,40);
 for(const row of captured.rows){assert.equal(await sha(path.join(work,'captured',row.file)),row.sha256);artifacts++;}
+const performance=await read(path.join(report,'performance.json'));
+assert.equal(performance.status,'passed');assert.equal(performance.sdkSha256,execution.sdkSha256);assert.equal(performance.modes.length,4);
+for(const mode of performance.modes){assert.deepEqual(mode.errors,[]);assert.equal(mode.warm.length,3);assert(mode.warm.every(row=>row.count===136&&row.runtime.actualBackend===mode.backend));}
 const scripts=[];for(const name of await readdir(path.join(root,'scripts/evaluation')))if(/\.(mjs|py)$/.test(name))scripts.push({file:'scripts/evaluation/'+name,sha256:await sha(path.join(root,'scripts/evaluation',name))});
 const summary={status:'passed',verifiedAt:new Date().toISOString(),modes:4,comparisons:40,rawArtifactsVerified:artifacts,scripts,
   sdkSha256:execution.sdkSha256,workerSha256:execution.workerSha256,
