@@ -4,7 +4,7 @@
 
 ## Installation and static assets
 
-Install the fixed version in an existing Vite/TypeScript browser project. Version 0.1.0 is in release preparation; actual receipts in [Release status](release.md) establish npm availability. Use the source setup below until the first publication completes.
+Install published version 0.1.0 in an existing Vite/TypeScript browser project. See [Release status](release.md) for npm integrity, CPU/GPU inference from the installed package, and production Demo verification. The source setup below is also available.
 
 ```powershell
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false add web-sdk-pp-rotated-detection@0.1.0

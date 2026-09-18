@@ -43,3 +43,11 @@ PP-YOLOE-R-s单尺度1024 FP32，33,161,415字节，SHA-256 `de2f4c94061bda4bfaa
 [PR #1](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/pull/1)经[独立审查及复审](review.md)、最新CI通过后合并到`09a0670c64b3c0681aced34057d3572d7973dc30`。[Pages运行35352034205](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205)成功部署到[正式HTTPS Demo](https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/)。
 
 [线上八组合](demo-online.json)均实际从明确来源下载模型，得到136框并与基线数值一致，显式Hugging Face失败不切ModelScope，无页面错误。[22项线上资产](demo-assets-online.json)逐文件完整GET的bytes/SHA与本地已验收构建一致；不只是检查HTTP首页可达。
+
+## npm 与 GitHub Release
+
+`web-sdk-pp-rotated-detection@0.1.0`已经发布。[npm完整回读](npm-published.json)验证公开metadata与完整tarball：6,163,715字节、SHA-256 `9146ac6d1c830fa98cdc730ef78e49bf5e33d3aaf69a7196b6771ab0a9a69cb6`，SHA-512与[CI首发包](npm-prepared-package.json)一致。包共24文件，不包含模型和评估图。
+
+[隔离npm安装](npm-install.json)从registry安装固定版本、复制实际安装包的dist资源，执行公共API和ModelScope真实下载。WASM/Worker与WebGPU/Worker均136框，模型身份与所有SDK静态资源摘要一致，无页面错误。验证脚本保存在本机`.tmp/npm-install-smoke.mjs`；本地评估图片不分发。
+
+[verify-only工作流](release-published.json)在不可变`v0.1.0` ref执行，再次比对registry与CI重建tarball完整性，所有job成功后创建[GitHub Release](https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/releases/tag/v0.1.0)。没有覆盖npm版本或移动标签。[远程治理回读](governance-published.json)记录已生效的Rulesets、HTTPS Pages、环境和成功部署/Release证据。
