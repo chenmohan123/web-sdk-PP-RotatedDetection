@@ -4,7 +4,7 @@
 
 ## 安装与静态资源
 
-在已有的 Vite/TypeScript 浏览器项目中安装固定版本。当前是 0.1.0 发布准备，npm 是否可安装以 [发布状态](release.md) 的实际回执为准；首发完成前可使用下方源码方式。
+在已有的 Vite/TypeScript 浏览器项目中安装已发布的 0.1.0。npm 包完整性、安装后 CPU/GPU 推理及正式 Demo 的验证记录见 [发布状态](release.md)；也可使用下方源码方式。
 
 ```powershell
 pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false add web-sdk-pp-rotated-detection@0.1.0

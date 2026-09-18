@@ -1,0 +1,972 @@
+{
+  "verifiedAt": "2026-09-18T14:07:42.8415690Z",
+  "repository": "chenmohan123/web-sdk-PP-RotatedDetection",
+  "status": "passed",
+  "rules": [
+    {
+      "id": "GOV-001",
+      "status": "pass"
+    },
+    {
+      "id": "GOV-002",
+      "status": "pass"
+    },
+    {
+      "id": "DEPLOY-001",
+      "status": "pass"
+    },
+    {
+      "id": "PAGES-001",
+      "status": "pass"
+    }
+  ],
+  "repositoryMetadata": {
+    "id": 1375887694,
+    "node_id": "R_kgDOUgJhTg",
+    "name": "web-sdk-PP-RotatedDetection",
+    "full_name": "chenmohan123/web-sdk-PP-RotatedDetection",
+    "private": false,
+    "owner": {
+      "login": "chenmohan123",
+      "id": 5992155,
+      "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/chenmohan123",
+      "html_url": "https://github.com/chenmohan123",
+      "followers_url": "https://api.github.com/users/chenmohan123/followers",
+      "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+      "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+      "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+      "repos_url": "https://api.github.com/users/chenmohan123/repos",
+      "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection",
+    "description": "浏览器端 PP-YOLOE-R 旋转框检测 SDK，支持 CPU/GPU、Worker、ModelScope 与 Hugging Face。",
+    "fork": false,
+    "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+    "forks_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/forks",
+    "keys_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/teams",
+    "hooks_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/hooks",
+    "issue_events_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/events",
+    "assignees_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/tags",
+    "blobs_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/languages",
+    "stargazers_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/stargazers",
+    "contributors_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/contributors",
+    "subscribers_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/subscribers",
+    "subscription_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/subscription",
+    "commits_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/merges",
+    "archive_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/downloads",
+    "issues_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/labels{/name}",
+    "releases_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments",
+    "created_at": "2026-09-18T13:09:45Z",
+    "updated_at": "2026-09-18T13:56:47Z",
+    "pushed_at": "2026-09-18T13:56:42Z",
+    "git_url": "git://github.com/chenmohan123/web-sdk-PP-RotatedDetection.git",
+    "ssh_url": "git@github.com:chenmohan123/web-sdk-PP-RotatedDetection.git",
+    "clone_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection.git",
+    "svn_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection",
+    "homepage": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/",
+    "size": 0,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": "TypeScript",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": true,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 1,
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    },
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [
+      "onnx",
+      "paddledetection",
+      "rotated-object-detection",
+      "typescript",
+      "webgpu"
+    ],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 1,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "temp_clone_token": "",
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "allow_auto_merge": false,
+    "delete_branch_on_merge": false,
+    "allow_update_branch": false,
+    "use_squash_pr_title_as_default": false,
+    "squash_merge_commit_message": "COMMIT_MESSAGES",
+    "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+    "merge_commit_message": "PR_TITLE",
+    "merge_commit_title": "MERGE_MESSAGE",
+    "security_and_analysis": {
+      "secret_scanning": {
+        "status": "enabled"
+      },
+      "secret_scanning_push_protection": {
+        "status": "enabled"
+      },
+      "dependabot_security_updates": {
+        "status": "enabled"
+      },
+      "secret_scanning_non_provider_patterns": {
+        "status": "disabled"
+      },
+      "secret_scanning_validity_checks": {
+        "status": "disabled"
+      }
+    },
+    "network_count": 0,
+    "subscribers_count": 0
+  },
+  "rulesets": [
+    {
+      "id": 23658518,
+      "name": "保护发布标签",
+      "target": "tag",
+      "source_type": "Repository",
+      "source": "chenmohan123/web-sdk-PP-RotatedDetection",
+      "enforcement": "active",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "refs/tags/v*"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "deletion"
+        },
+        {
+          "type": "update"
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5SAmFOzgFpABY",
+      "created_at": "2026-09-18T21:20:00.07+08:00",
+      "updated_at": "2026-09-18T21:20:00.096+08:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/rulesets/23658518"
+        },
+        "html": {
+          "href": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/rules/23658518"
+        }
+      }
+    },
+    {
+      "id": 23658516,
+      "name": "保护默认分支",
+      "target": "branch",
+      "source_type": "Repository",
+      "source": "chenmohan123/web-sdk-PP-RotatedDetection",
+      "enforcement": "active",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "~DEFAULT_BRANCH"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "deletion"
+        },
+        {
+          "type": "non_fast_forward"
+        },
+        {
+          "type": "pull_request",
+          "parameters": {
+            "required_approving_review_count": 0,
+            "dismiss_stale_reviews_on_push": true,
+            "required_reviewers": [],
+            "require_code_owner_review": false,
+            "require_last_push_approval": false,
+            "required_review_thread_resolution": true,
+            "require_extra_approval_for_unattributed_changes": true,
+            "allowed_merge_methods": [
+              "merge",
+              "squash",
+              "rebase"
+            ]
+          }
+        },
+        {
+          "type": "required_status_checks",
+          "parameters": {
+            "strict_required_status_checks_policy": true,
+            "do_not_enforce_on_create": false,
+            "required_status_checks": [
+              {
+                "context": "verify",
+                "integration_id": 15368
+              }
+            ]
+          }
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5SAmFOzgFpABQ",
+      "created_at": "2026-09-18T21:19:59.078+08:00",
+      "updated_at": "2026-09-18T21:19:59.179+08:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/rulesets/23658516"
+        },
+        "html": {
+          "href": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/rules/23658516"
+        }
+      }
+    }
+  ],
+  "pages": {
+    "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/pages",
+    "status": null,
+    "cname": null,
+    "custom_404": false,
+    "html_url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/",
+    "build_type": "workflow",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_enforced": true
+  },
+  "environments": {
+    "total_count": 2,
+    "environments": [
+      {
+        "id": 22229133556,
+        "node_id": "EN_kwDOUgJhTs8AAAAFLPWo9A",
+        "name": "github-pages",
+        "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/environments/github-pages",
+        "html_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/deployments/activity_log?environments_filter=github-pages",
+        "created_at": "2026-09-18T13:20:01Z",
+        "updated_at": "2026-09-18T13:20:01Z",
+        "can_admins_bypass": true,
+        "protection_rules": [
+          {
+            "id": 65985491,
+            "node_id": "GA_kwDOUgJhTs4D7tvT",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": true,
+          "custom_branch_policies": false
+        }
+      },
+      {
+        "id": 22229134423,
+        "node_id": "EN_kwDOUgJhTs8AAAAFLPWsVw",
+        "name": "npm",
+        "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/environments/npm",
+        "html_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/deployments/activity_log?environments_filter=npm",
+        "created_at": "2026-09-18T13:20:02Z",
+        "updated_at": "2026-09-18T13:20:02Z",
+        "can_admins_bypass": true,
+        "protection_rules": [
+          {
+            "id": 65985493,
+            "node_id": "GA_kwDOUgJhTs4D7tvV",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      }
+    ]
+  },
+  "npmDeploymentPolicies": {
+    "total_count": 1,
+    "branch_policies": [
+      {
+        "id": 60336589,
+        "node_id": "MDE2OkdhdGVCcmFuY2hQb2xpY3k2MDMzNjU4OQ==",
+        "name": "v*",
+        "type": "tag"
+      }
+    ]
+  },
+  "deployments": [
+    {
+      "deployment": {
+        "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292",
+        "id": 6525793292,
+        "node_id": "DE_kwDOUgJhTs8AAAABhPe0DA",
+        "task": "deploy",
+        "original_environment": "github-pages",
+        "environment": "github-pages",
+        "description": null,
+        "created_at": "2026-09-18T13:57:11Z",
+        "updated_at": "2026-09-18T13:57:32Z",
+        "statuses_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292/statuses",
+        "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+        "creator": {
+          "login": "chenmohan123",
+          "id": 5992155,
+          "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/chenmohan123",
+          "html_url": "https://github.com/chenmohan123",
+          "followers_url": "https://api.github.com/users/chenmohan123/followers",
+          "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+          "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+          "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+          "repos_url": "https://api.github.com/users/chenmohan123/repos",
+          "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "sha": "768ad4f8dcafd5535d6ed0a8a8543caa1f0204ca",
+        "ref": "main",
+        "payload": {},
+        "transient_environment": false,
+        "production_environment": false,
+        "performed_via_github_app": {
+          "id": 15368,
+          "client_id": "Iv1.05c79e9ad1f6bdfa",
+          "slug": "github-actions",
+          "node_id": "MDM6QXBwMTUzNjg=",
+          "owner": {
+            "login": "github",
+            "id": 9919,
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjk5MTk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/9919?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/github",
+            "html_url": "https://github.com/github",
+            "followers_url": "https://api.github.com/users/github/followers",
+            "following_url": "https://api.github.com/users/github/following{/other_user}",
+            "gists_url": "https://api.github.com/users/github/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/github/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/github/subscriptions",
+            "organizations_url": "https://api.github.com/users/github/orgs",
+            "repos_url": "https://api.github.com/users/github/repos",
+            "events_url": "https://api.github.com/users/github/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/github/received_events",
+            "type": "Organization",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "name": "GitHub Actions",
+          "description": "Automate your workflow from idea to production",
+          "external_url": "https://help.github.com/en/actions",
+          "html_url": "https://github.com/apps/github-actions",
+          "created_at": "2018-07-30T09:30:17Z",
+          "updated_at": "2026-06-18T16:17:48Z",
+          "permissions": {
+            "actions": "write",
+            "administration": "read",
+            "artifact_metadata": "write",
+            "attestations": "write",
+            "checks": "write",
+            "code_quality": "write",
+            "contents": "write",
+            "copilot_requests": "write",
+            "deployments": "write",
+            "discussions": "write",
+            "drives": "write",
+            "issues": "write",
+            "merge_queues": "write",
+            "metadata": "read",
+            "models": "read",
+            "packages": "write",
+            "pages": "write",
+            "pull_requests": "write",
+            "repository_hooks": "write",
+            "repository_projects": "write",
+            "security_events": "write",
+            "statuses": "write",
+            "vulnerability_alerts": "read"
+          },
+          "events": [
+            "branch_protection_rule",
+            "check_run",
+            "check_suite",
+            "create",
+            "delete",
+            "deployment",
+            "deployment_status",
+            "discussion",
+            "discussion_comment",
+            "fork",
+            "gollum",
+            "issues",
+            "issue_comment",
+            "label",
+            "merge_group",
+            "milestone",
+            "page_build",
+            "public",
+            "pull_request",
+            "pull_request_review",
+            "pull_request_review_comment",
+            "push",
+            "registry_package",
+            "release",
+            "repository",
+            "repository_dispatch",
+            "status",
+            "watch",
+            "workflow_dispatch",
+            "workflow_run"
+          ]
+        }
+      },
+      "statuses": [
+        {
+          "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292/statuses/18527193343",
+          "id": 18527193343,
+          "node_id": "DES_kwDOUgJhTs8AAAAEUE6I_w",
+          "state": "success",
+          "creator": {
+            "login": "chenmohan123",
+            "id": 5992155,
+            "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/chenmohan123",
+            "html_url": "https://github.com/chenmohan123",
+            "followers_url": "https://api.github.com/users/chenmohan123/followers",
+            "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+            "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+            "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+            "repos_url": "https://api.github.com/users/chenmohan123/repos",
+            "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "description": "",
+          "environment": "github-pages",
+          "target_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35353202126/job/105626221420",
+          "created_at": "2026-09-18T13:57:32Z",
+          "updated_at": "2026-09-18T13:57:32Z",
+          "deployment_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292",
+          "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+          "environment_url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/",
+          "log_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35353202126/job/105626221420",
+          "performed_via_github_app": null
+        },
+        {
+          "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292/statuses/18527182238",
+          "id": 18527182238,
+          "node_id": "DES_kwDOUgJhTs8AAAAEUE5dng",
+          "state": "in_progress",
+          "creator": {
+            "login": "chenmohan123",
+            "id": 5992155,
+            "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/chenmohan123",
+            "html_url": "https://github.com/chenmohan123",
+            "followers_url": "https://api.github.com/users/chenmohan123/followers",
+            "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+            "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+            "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+            "repos_url": "https://api.github.com/users/chenmohan123/repos",
+            "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "description": "",
+          "environment": "github-pages",
+          "target_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35353202126/job/105626221420",
+          "created_at": "2026-09-18T13:57:15Z",
+          "updated_at": "2026-09-18T13:57:15Z",
+          "deployment_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292",
+          "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+          "environment_url": "",
+          "log_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35353202126/job/105626221420",
+          "performed_via_github_app": null
+        },
+        {
+          "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292/statuses/18527180269",
+          "id": 18527180269,
+          "node_id": "DES_kwDOUgJhTs8AAAAEUE5V7Q",
+          "state": "queued",
+          "creator": {
+            "login": "chenmohan123",
+            "id": 5992155,
+            "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/chenmohan123",
+            "html_url": "https://github.com/chenmohan123",
+            "followers_url": "https://api.github.com/users/chenmohan123/followers",
+            "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+            "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+            "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+            "repos_url": "https://api.github.com/users/chenmohan123/repos",
+            "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "description": "",
+          "environment": "github-pages",
+          "target_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35353202126/job/105626221420",
+          "created_at": "2026-09-18T13:57:12Z",
+          "updated_at": "2026-09-18T13:57:12Z",
+          "deployment_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292",
+          "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+          "environment_url": "",
+          "log_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35353202126/job/105626221420",
+          "performed_via_github_app": null
+        },
+        {
+          "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292/statuses/18527179837",
+          "id": 18527179837,
+          "node_id": "DES_kwDOUgJhTs8AAAAEUE5UPQ",
+          "state": "waiting",
+          "creator": {
+            "login": "chenmohan123",
+            "id": 5992155,
+            "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/chenmohan123",
+            "html_url": "https://github.com/chenmohan123",
+            "followers_url": "https://api.github.com/users/chenmohan123/followers",
+            "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+            "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+            "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+            "repos_url": "https://api.github.com/users/chenmohan123/repos",
+            "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "description": "",
+          "environment": "github-pages",
+          "target_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35353202126/job/105626221420",
+          "created_at": "2026-09-18T13:57:12Z",
+          "updated_at": "2026-09-18T13:57:12Z",
+          "deployment_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525793292",
+          "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+          "environment_url": "",
+          "log_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35353202126/job/105626221420",
+          "performed_via_github_app": null
+        }
+      ]
+    },
+    {
+      "deployment": {
+        "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935",
+        "id": 6525578935,
+        "node_id": "DE_kwDOUgJhTs8AAAABhPRutw",
+        "task": "deploy",
+        "original_environment": "github-pages",
+        "environment": "github-pages",
+        "description": null,
+        "created_at": "2026-09-18T13:45:18Z",
+        "updated_at": "2026-09-18T13:45:34Z",
+        "statuses_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935/statuses",
+        "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+        "creator": {
+          "login": "chenmohan123",
+          "id": 5992155,
+          "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/chenmohan123",
+          "html_url": "https://github.com/chenmohan123",
+          "followers_url": "https://api.github.com/users/chenmohan123/followers",
+          "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+          "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+          "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+          "repos_url": "https://api.github.com/users/chenmohan123/repos",
+          "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "sha": "09a0670c64b3c0681aced34057d3572d7973dc30",
+        "ref": "main",
+        "payload": {},
+        "transient_environment": false,
+        "production_environment": false,
+        "performed_via_github_app": {
+          "id": 15368,
+          "client_id": "Iv1.05c79e9ad1f6bdfa",
+          "slug": "github-actions",
+          "node_id": "MDM6QXBwMTUzNjg=",
+          "owner": {
+            "login": "github",
+            "id": 9919,
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjk5MTk=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/9919?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/github",
+            "html_url": "https://github.com/github",
+            "followers_url": "https://api.github.com/users/github/followers",
+            "following_url": "https://api.github.com/users/github/following{/other_user}",
+            "gists_url": "https://api.github.com/users/github/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/github/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/github/subscriptions",
+            "organizations_url": "https://api.github.com/users/github/orgs",
+            "repos_url": "https://api.github.com/users/github/repos",
+            "events_url": "https://api.github.com/users/github/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/github/received_events",
+            "type": "Organization",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "name": "GitHub Actions",
+          "description": "Automate your workflow from idea to production",
+          "external_url": "https://help.github.com/en/actions",
+          "html_url": "https://github.com/apps/github-actions",
+          "created_at": "2018-07-30T09:30:17Z",
+          "updated_at": "2026-06-18T16:17:48Z",
+          "permissions": {
+            "actions": "write",
+            "administration": "read",
+            "artifact_metadata": "write",
+            "attestations": "write",
+            "checks": "write",
+            "code_quality": "write",
+            "contents": "write",
+            "copilot_requests": "write",
+            "deployments": "write",
+            "discussions": "write",
+            "drives": "write",
+            "issues": "write",
+            "merge_queues": "write",
+            "metadata": "read",
+            "models": "read",
+            "packages": "write",
+            "pages": "write",
+            "pull_requests": "write",
+            "repository_hooks": "write",
+            "repository_projects": "write",
+            "security_events": "write",
+            "statuses": "write",
+            "vulnerability_alerts": "read"
+          },
+          "events": [
+            "branch_protection_rule",
+            "check_run",
+            "check_suite",
+            "create",
+            "delete",
+            "deployment",
+            "deployment_status",
+            "discussion",
+            "discussion_comment",
+            "fork",
+            "gollum",
+            "issues",
+            "issue_comment",
+            "label",
+            "merge_group",
+            "milestone",
+            "page_build",
+            "public",
+            "pull_request",
+            "pull_request_review",
+            "pull_request_review_comment",
+            "push",
+            "registry_package",
+            "release",
+            "repository",
+            "repository_dispatch",
+            "status",
+            "watch",
+            "workflow_dispatch",
+            "workflow_run"
+          ]
+        }
+      },
+      "statuses": [
+        {
+          "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935/statuses/18526697344",
+          "id": 18526697344,
+          "node_id": "DES_kwDOUgJhTs8AAAAEUEb3gA",
+          "state": "success",
+          "creator": {
+            "login": "chenmohan123",
+            "id": 5992155,
+            "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/chenmohan123",
+            "html_url": "https://github.com/chenmohan123",
+            "followers_url": "https://api.github.com/users/chenmohan123/followers",
+            "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+            "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+            "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+            "repos_url": "https://api.github.com/users/chenmohan123/repos",
+            "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "description": "",
+          "environment": "github-pages",
+          "target_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205/job/105622342726",
+          "created_at": "2026-09-18T13:45:34Z",
+          "updated_at": "2026-09-18T13:45:34Z",
+          "deployment_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935",
+          "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+          "environment_url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/",
+          "log_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205/job/105622342726",
+          "performed_via_github_app": null
+        },
+        {
+          "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935/statuses/18526689552",
+          "id": 18526689552,
+          "node_id": "DES_kwDOUgJhTs8AAAAEUEbZEA",
+          "state": "in_progress",
+          "creator": {
+            "login": "chenmohan123",
+            "id": 5992155,
+            "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/chenmohan123",
+            "html_url": "https://github.com/chenmohan123",
+            "followers_url": "https://api.github.com/users/chenmohan123/followers",
+            "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+            "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+            "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+            "repos_url": "https://api.github.com/users/chenmohan123/repos",
+            "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "description": "",
+          "environment": "github-pages",
+          "target_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205/job/105622342726",
+          "created_at": "2026-09-18T13:45:23Z",
+          "updated_at": "2026-09-18T13:45:23Z",
+          "deployment_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935",
+          "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+          "environment_url": "",
+          "log_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205/job/105622342726",
+          "performed_via_github_app": null
+        },
+        {
+          "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935/statuses/18526687537",
+          "id": 18526687537,
+          "node_id": "DES_kwDOUgJhTs8AAAAEUEbRMQ",
+          "state": "queued",
+          "creator": {
+            "login": "chenmohan123",
+            "id": 5992155,
+            "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/chenmohan123",
+            "html_url": "https://github.com/chenmohan123",
+            "followers_url": "https://api.github.com/users/chenmohan123/followers",
+            "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+            "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+            "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+            "repos_url": "https://api.github.com/users/chenmohan123/repos",
+            "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "description": "",
+          "environment": "github-pages",
+          "target_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205/job/105622342726",
+          "created_at": "2026-09-18T13:45:20Z",
+          "updated_at": "2026-09-18T13:45:20Z",
+          "deployment_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935",
+          "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+          "environment_url": "",
+          "log_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205/job/105622342726",
+          "performed_via_github_app": null
+        },
+        {
+          "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935/statuses/18526686848",
+          "id": 18526686848,
+          "node_id": "DES_kwDOUgJhTs8AAAAEUEbOgA",
+          "state": "waiting",
+          "creator": {
+            "login": "chenmohan123",
+            "id": 5992155,
+            "node_id": "MDQ6VXNlcjU5OTIxNTU=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5992155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/chenmohan123",
+            "html_url": "https://github.com/chenmohan123",
+            "followers_url": "https://api.github.com/users/chenmohan123/followers",
+            "following_url": "https://api.github.com/users/chenmohan123/following{/other_user}",
+            "gists_url": "https://api.github.com/users/chenmohan123/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/chenmohan123/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/chenmohan123/subscriptions",
+            "organizations_url": "https://api.github.com/users/chenmohan123/orgs",
+            "repos_url": "https://api.github.com/users/chenmohan123/repos",
+            "events_url": "https://api.github.com/users/chenmohan123/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/chenmohan123/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "description": "",
+          "environment": "github-pages",
+          "target_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205/job/105622342726",
+          "created_at": "2026-09-18T13:45:19Z",
+          "updated_at": "2026-09-18T13:45:19Z",
+          "deployment_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/deployments/6525578935",
+          "repository_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection",
+          "environment_url": "",
+          "log_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352034205/job/105622342726",
+          "performed_via_github_app": null
+        }
+      ]
+    }
+  ],
+  "release": {
+    "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/releases/391522972",
+    "assets_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/releases/391522972/assets",
+    "upload_url": "https://uploads.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/releases/391522972/assets{?name,label}",
+    "html_url": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/releases/tag/v0.1.0",
+    "id": 391522972,
+    "author": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOUgJhTs4XViqc",
+    "tag_name": "v0.1.0",
+    "target_commitish": "main",
+    "name": "v0.1.0",
+    "draft": false,
+    "immutable": false,
+    "prerelease": false,
+    "created_at": "2026-09-18T13:48:36Z",
+    "updated_at": "2026-09-18T14:05:11Z",
+    "published_at": "2026-09-18T14:05:11Z",
+    "assets": [],
+    "tarball_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/tarball/v0.1.0",
+    "zipball_url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/zipball/v0.1.0",
+    "body": "# 更新记录\n\n## 0.1.0 — 2026-09-18\n\n- 新增框架无关PP-YOLOE-R-s FP32单帧旋转框SDK、DOTA15类原图四点输出。\n- WASM/WebGPU、main/Worker、校验缓存、协作取消及幂等释放。\n- Detection风格双语Demo：上传/拖放、阈值、稳定选中、JSON/叠加PNG导出和缓存控制。\n- 双语安装与集成文档、Vanilla/React 示例、带真实回执门禁的 CI/Pages/Release。\n- 已完成有日期桌面数值验证；无全量DOTA mAP、手机或NPU承诺。\n- 默认模型为 PP-YOLOE-R-s 单尺度 1024 FP32、opset 17、33,161,415 字节；SHA-256：`de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089`。\n- 默认 ModelScope，Hugging Face 可选；固定 revision 与下载地址以 `models/model.json` 为准，显式来源失败不静默换源。\n- SDK 采用 Apache-2.0；PaddleDetection 上游与权重许可解释、转换归因见 `models/README.md`、`models/LICENSE` 和 `NOTICE`。\n- 首版支持仅准备 tarball、npm Trusted Publishing 或验证本机首发；npm 完整性匹配后才创建 GitHub Release，不移动版本标签。\n- npm、GitHub Release 与 HTTPS Demo 的实际发布状态以 `reports/2026-09-18-release/` 回执为准。\n"
+  },
+  "tag": {
+    "ref": "refs/tags/v0.1.0",
+    "node_id": "REF_kwDOUgJhTrByZWZzL3RhZ3MvdjAuMS4w",
+    "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/git/refs/tags/v0.1.0",
+    "object": {
+      "sha": "52522e04774f69ea4dcb1d946af611fcb7aacbb3",
+      "type": "tag",
+      "url": "https://api.github.com/repos/chenmohan123/web-sdk-PP-RotatedDetection/git/tags/52522e04774f69ea4dcb1d946af611fcb7aacbb3"
+    }
+  }
+}

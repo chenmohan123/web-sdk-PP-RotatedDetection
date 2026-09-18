@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-09-18T14:03:48.322Z",
+  "status": "passed",
+  "package": "web-sdk-pp-rotated-detection@0.1.0",
+  "metadataUrl": "https://registry.npmjs.org/web-sdk-pp-rotated-detection/0.1.0",
+  "dist": {
+    "shasum": "f0eeb6c032f629eb411f970f36da51f8ceb559ef",
+    "tarball": "https://registry.npmjs.org/web-sdk-pp-rotated-detection/-/web-sdk-pp-rotated-detection-0.1.0.tgz",
+    "fileCount": 24,
+    "integrity": "sha512-Ag9KH21GpGnPbp470TSXxN1PUR9O9PUuyBRQHUX3o8ZGwKOnmREHPBMpsBALcF4LocpBhhVd7q200I3/GiIjhA==",
+    "signatures": [
+      {
+        "sig": "MEUCIA+mMOME2n8raxmfRduVSXNDoR10IrwhJNHnctJJiy8eAiEAzf+/xmLWSgfLSAvm9mV5fbRm5zfQcCcA1Mkp2sIFqsY=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "unpackedSize": 25027901
+  },
+  "bytes": 6163715,
+  "sha256": "9146ac6d1c830fa98cdc730ef78e49bf5e33d3aaf69a7196b6771ab0a9a69cb6",
+  "integrity": "sha512-Ag9KH21GpGnPbp470TSXxN1PUR9O9PUuyBRQHUX3o8ZGwKOnmREHPBMpsBALcF4LocpBhhVd7q200I3/GiIjhA==",
+  "repository": {
+    "url": "git+https://github.com/chenmohan123/web-sdk-PP-RotatedDetection.git",
+    "type": "git"
+  },
+  "license": "Apache-2.0",
+  "prepareRun": "https://github.com/chenmohan123/web-sdk-PP-RotatedDetection/actions/runs/35352403353"
+}
