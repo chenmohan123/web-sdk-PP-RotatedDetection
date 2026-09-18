@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-09-18T12:09:26.006Z",
+  "modes": 4,
+  "comparisons": 40,
+  "rawArtifactsVerified": 236,
+  "scripts": [
+    {
+      "file": "scripts/evaluation/browser.mjs",
+      "sha256": "5571cda8fc30ed9f1fba0b36103a0db3c870eb470c2e468d85a78b0e1b26076d"
+    },
+    {
+      "file": "scripts/evaluation/compare.py",
+      "sha256": "fed9a80b292c9ad0d6770a40e73b5f3fefe3559d1e6df305f3393e8055811018"
+    },
+    {
+      "file": "scripts/evaluation/performance.mjs",
+      "sha256": "86bb4440772edd211b5858db726150614cfdca3c947bf9f9acae7ddf0b475f8f"
+    },
+    {
+      "file": "scripts/evaluation/prepare_reference.py",
+      "sha256": "be6be9896f78532fa154ab504428253cec6f1dc1154097f0e714b44339e4ccae"
+    },
+    {
+      "file": "scripts/evaluation/verify.mjs",
+      "sha256": "0713526b0faa48eea5226e1742a977f9052887f5b1b297053d499570f50d5f09"
+    }
+  ],
+  "sdkSha256": "f065b0114ff690274c99b2706f46a49d06cb815a3b0a2126e98799a56e9ffbf9",
+  "workerSha256": "aa2da4999cfa8649ed379c3351a3c3089a2e6124713d2e50fd2c23f42da2b9fe",
+  "worstEndToEndIoU": 0.999354716600993,
+  "worstSameTensorIoU": 0.999354716600993,
+  "maximumCornerErrorPx": 0.019007424761184666,
+  "scope": "公共SDK桌面图片验证，仅本次浏览器设备；不声明全量DOTA mAP、手机或NPU兼容。"
+}

@@ -1,0 +1,1773 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-09-18T12:08:53.935637+00:00",
+  "thresholds": {
+    "minimumPolygonIoU": 0.995,
+    "maximumScoreError": 0.001,
+    "maximumCornerErrorPx": 0.1,
+    "sameCountAndClasses": true
+  },
+  "scope": "图片端到端严格对照；同张量参考另行报告。不是全量DOTA mAP。",
+  "rows": [
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "P0072",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.01750713586807251,
+        "meanAbsoluteError": 1.270283007670514e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999778670186138,
+        "maximumScoreError": 1.341104507446289e-05,
+        "maximumCornerErrorPx": 0.003270572404289851,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999886080729918,
+        "maximumScoreError": 1.6093254089355469e-06,
+        "maximumCornerErrorPx": 0.001744693498039851,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.5033950805664062e-06,
+          "meanAbsoluteError": 3.180394259061359e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0038909912109375,
+          "meanAbsoluteError": 0.00012418159167282283
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "P0072",
+      "inputKind": "blob",
+      "input": {
+        "maxAbsoluteError": 0.01750713586807251,
+        "meanAbsoluteError": 1.270283007670514e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999778670186138,
+        "maximumScoreError": 1.341104507446289e-05,
+        "maximumCornerErrorPx": 0.003270572404289851,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999886080729918,
+        "maximumScoreError": 1.6093254089355469e-06,
+        "maximumCornerErrorPx": 0.001744693498039851,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.5033950805664062e-06,
+          "meanAbsoluteError": 3.180394259061359e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0038909912109375,
+          "meanAbsoluteError": 0.00012418159167282283
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "P0861",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 136,
+        "actualCount": 136,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999892946543223,
+        "maximumScoreError": 4.917383193969727e-07,
+        "maximumCornerErrorPx": 0.00012597651101486917,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 136,
+        "actualCount": 136,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999892946543223,
+        "maximumScoreError": 4.917383193969727e-07,
+        "maximumCornerErrorPx": 0.00012597651101486917,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.1622905731201172e-06,
+          "meanAbsoluteError": 3.01100939736898e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0031585693359375,
+          "meanAbsoluteError": 3.295850910944864e-05
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "P0072-rot90",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507076263427734,
+        "meanAbsoluteError": 1.7660538276231819e-07,
+        "differentElements": 32,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 13,
+        "actualCount": 13,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999867412954933,
+        "maximumScoreError": 4.492700099945068e-06,
+        "maximumCornerErrorPx": 0.0012409121286509617,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 13,
+        "actualCount": 13,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999904629144571,
+        "maximumScoreError": 2.4810433387756348e-06,
+        "maximumCornerErrorPx": 0.0005143416408373014,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.4810433387756348e-06,
+          "meanAbsoluteError": 3.40122383590824e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0074920654296875,
+          "meanAbsoluteError": 0.0001453471923014149
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "P0861-crop",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 129,
+        "actualCount": 129,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.999354716600993,
+        "maximumScoreError": 2.574920654296875e-05,
+        "maximumCornerErrorPx": 0.010721736167170093,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 129,
+        "actualCount": 129,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.999354716600993,
+        "maximumScoreError": 2.574920654296875e-05,
+        "maximumCornerErrorPx": 0.010721736167170093,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 7.134675979614258e-05,
+          "meanAbsoluteError": 2.3712073016213253e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0736083984375,
+          "meanAbsoluteError": 0.00172057980671525
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "blank",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 3.7439167499542236e-07,
+          "meanAbsoluteError": 3.25356488417583e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.00665283203125,
+          "meanAbsoluteError": 0.00010403712803963572
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "P0072-641x513",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507001757621765,
+        "meanAbsoluteError": 1.2663677750879287e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 9,
+        "actualCount": 9,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999262566873859,
+        "maximumScoreError": 2.1710991859436035e-05,
+        "maximumCornerErrorPx": 0.00830952194087331,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 9,
+        "actualCount": 9,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999303553977473,
+        "maximumScoreError": 2.2619962692260742e-05,
+        "maximumCornerErrorPx": 0.00831752922852047,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 3.387033939361572e-05,
+          "meanAbsoluteError": 1.5398209995964862e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.062103271484375,
+          "meanAbsoluteError": 0.0016848937375470996
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "P0861-1537x769",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507076263427734,
+        "meanAbsoluteError": 3.324566932860762e-08,
+        "differentElements": 6,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 116,
+        "actualCount": 116,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9997851418795479,
+        "maximumScoreError": 0.00011560320854187012,
+        "maximumCornerErrorPx": 0.014371190772862974,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 116,
+        "actualCount": 116,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.999917973952541,
+        "maximumScoreError": 4.0084123611450195e-05,
+        "maximumCornerErrorPx": 0.005537664351777494,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 5.7250261306762695e-05,
+          "meanAbsoluteError": 2.1125107707575808e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.067291259765625,
+          "meanAbsoluteError": 0.0016993823228403926
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "P0072-tall",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017429202795028687,
+        "meanAbsoluteError": 2.196881609961565e-08,
+        "differentElements": 4,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 3,
+        "actualCount": 3,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999663417652612,
+        "maximumScoreError": 1.0311603546142578e-05,
+        "maximumCornerErrorPx": 0.006469634064444563,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 3,
+        "actualCount": 3,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999609118192937,
+        "maximumScoreError": 1.0520219802856445e-05,
+        "maximumCornerErrorPx": 0.007156279572257063,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.0520219802856445e-05,
+          "meanAbsoluteError": 6.450597567209115e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.03204345703125,
+          "meanAbsoluteError": 0.00062559824436903
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "main",
+      "id": "white-wide",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 3.594905138015747e-07,
+          "meanAbsoluteError": 3.151939154122374e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.007171630859375,
+          "meanAbsoluteError": 0.0001728803472360596
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "P0072",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.01750713586807251,
+        "meanAbsoluteError": 1.270283007670514e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999778670186138,
+        "maximumScoreError": 1.341104507446289e-05,
+        "maximumCornerErrorPx": 0.003270572404289851,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999886080729918,
+        "maximumScoreError": 1.6093254089355469e-06,
+        "maximumCornerErrorPx": 0.001744693498039851,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.5033950805664062e-06,
+          "meanAbsoluteError": 3.180394259061359e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0038909912109375,
+          "meanAbsoluteError": 0.00012418159167282283
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "P0072",
+      "inputKind": "blob",
+      "input": {
+        "maxAbsoluteError": 0.01750713586807251,
+        "meanAbsoluteError": 1.270283007670514e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999778670186138,
+        "maximumScoreError": 1.341104507446289e-05,
+        "maximumCornerErrorPx": 0.003270572404289851,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999886080729918,
+        "maximumScoreError": 1.6093254089355469e-06,
+        "maximumCornerErrorPx": 0.001744693498039851,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.5033950805664062e-06,
+          "meanAbsoluteError": 3.180394259061359e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0038909912109375,
+          "meanAbsoluteError": 0.00012418159167282283
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "P0861",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 136,
+        "actualCount": 136,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999892946543223,
+        "maximumScoreError": 4.917383193969727e-07,
+        "maximumCornerErrorPx": 0.00012597651101486917,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 136,
+        "actualCount": 136,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999892946543223,
+        "maximumScoreError": 4.917383193969727e-07,
+        "maximumCornerErrorPx": 0.00012597651101486917,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.1622905731201172e-06,
+          "meanAbsoluteError": 3.01100939736898e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0031585693359375,
+          "meanAbsoluteError": 3.295850910944864e-05
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "P0072-rot90",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507076263427734,
+        "meanAbsoluteError": 1.7660538276231819e-07,
+        "differentElements": 32,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 13,
+        "actualCount": 13,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999867412954933,
+        "maximumScoreError": 4.492700099945068e-06,
+        "maximumCornerErrorPx": 0.0012409121286509617,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 13,
+        "actualCount": 13,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999904629144571,
+        "maximumScoreError": 2.4810433387756348e-06,
+        "maximumCornerErrorPx": 0.0005143416408373014,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.4810433387756348e-06,
+          "meanAbsoluteError": 3.40122383590824e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0074920654296875,
+          "meanAbsoluteError": 0.0001453471923014149
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "P0861-crop",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 129,
+        "actualCount": 129,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.999354716600993,
+        "maximumScoreError": 2.574920654296875e-05,
+        "maximumCornerErrorPx": 0.010721736167170093,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 129,
+        "actualCount": 129,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.999354716600993,
+        "maximumScoreError": 2.574920654296875e-05,
+        "maximumCornerErrorPx": 0.010721736167170093,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 7.134675979614258e-05,
+          "meanAbsoluteError": 2.3712073016213253e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0736083984375,
+          "meanAbsoluteError": 0.00172057980671525
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "blank",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 3.7439167499542236e-07,
+          "meanAbsoluteError": 3.25356488417583e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.00665283203125,
+          "meanAbsoluteError": 0.00010403712803963572
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "P0072-641x513",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507001757621765,
+        "meanAbsoluteError": 1.2663677750879287e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 9,
+        "actualCount": 9,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999262566873859,
+        "maximumScoreError": 2.1710991859436035e-05,
+        "maximumCornerErrorPx": 0.00830952194087331,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 9,
+        "actualCount": 9,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999303553977473,
+        "maximumScoreError": 2.2619962692260742e-05,
+        "maximumCornerErrorPx": 0.00831752922852047,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 3.387033939361572e-05,
+          "meanAbsoluteError": 1.5398209995964862e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.062103271484375,
+          "meanAbsoluteError": 0.0016848937375470996
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "P0861-1537x769",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507076263427734,
+        "meanAbsoluteError": 3.324566932860762e-08,
+        "differentElements": 6,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 116,
+        "actualCount": 116,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9997851418795479,
+        "maximumScoreError": 0.00011560320854187012,
+        "maximumCornerErrorPx": 0.014371190772862974,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 116,
+        "actualCount": 116,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.999917973952541,
+        "maximumScoreError": 4.0084123611450195e-05,
+        "maximumCornerErrorPx": 0.005537664351777494,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 5.7250261306762695e-05,
+          "meanAbsoluteError": 2.1125107707575808e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.067291259765625,
+          "meanAbsoluteError": 0.0016993823228403926
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "P0072-tall",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017429202795028687,
+        "meanAbsoluteError": 2.196881609961565e-08,
+        "differentElements": 4,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 3,
+        "actualCount": 3,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999663417652612,
+        "maximumScoreError": 1.0311603546142578e-05,
+        "maximumCornerErrorPx": 0.006469634064444563,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 3,
+        "actualCount": 3,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999609118192937,
+        "maximumScoreError": 1.0520219802856445e-05,
+        "maximumCornerErrorPx": 0.007156279572257063,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.0520219802856445e-05,
+          "meanAbsoluteError": 6.450597567209115e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.03204345703125,
+          "meanAbsoluteError": 0.00062559824436903
+        }
+      ]
+    },
+    {
+      "backend": "wasm",
+      "executionMode": "worker",
+      "id": "white-wide",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 3.594905138015747e-07,
+          "meanAbsoluteError": 3.151939154122374e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.007171630859375,
+          "meanAbsoluteError": 0.0001728803472360596
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "P0072",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.01750713586807251,
+        "meanAbsoluteError": 1.270283007670514e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999708215834078,
+        "maximumScoreError": 1.341104507446289e-05,
+        "maximumCornerErrorPx": 0.004309988151817379,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999902554302516,
+        "maximumScoreError": 1.6093254089355469e-06,
+        "maximumCornerErrorPx": 0.002784109245567379,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.9073486328125e-06,
+          "meanAbsoluteError": 1.837618057720647e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0070343017578125,
+          "meanAbsoluteError": 0.00020404555834829807
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "P0072",
+      "inputKind": "blob",
+      "input": {
+        "maxAbsoluteError": 0.01750713586807251,
+        "meanAbsoluteError": 1.270283007670514e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999708215834078,
+        "maximumScoreError": 1.341104507446289e-05,
+        "maximumCornerErrorPx": 0.004309988151817379,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999902554302516,
+        "maximumScoreError": 1.6093254089355469e-06,
+        "maximumCornerErrorPx": 0.002784109245567379,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.9073486328125e-06,
+          "meanAbsoluteError": 1.837618057720647e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0070343017578125,
+          "meanAbsoluteError": 0.00020404555834829807
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "P0861",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 136,
+        "actualCount": 136,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999903846581197,
+        "maximumScoreError": 6.556510925292969e-07,
+        "maximumCornerErrorPx": 0.0003980614744136801,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 136,
+        "actualCount": 136,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999903846581197,
+        "maximumScoreError": 6.556510925292969e-07,
+        "maximumCornerErrorPx": 0.0003980614744136801,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 9.5367431640625e-07,
+          "meanAbsoluteError": 6.929396612065375e-09
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0023193359375,
+          "meanAbsoluteError": 2.8221977117937058e-05
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "P0072-rot90",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507076263427734,
+        "meanAbsoluteError": 1.7660538276231819e-07,
+        "differentElements": 32,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 13,
+        "actualCount": 13,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999827585763228,
+        "maximumScoreError": 3.0249357223510742e-06,
+        "maximumCornerErrorPx": 0.0015467846116052897,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 13,
+        "actualCount": 13,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999908838328057,
+        "maximumScoreError": 2.853572368621826e-06,
+        "maximumCornerErrorPx": 0.0004784052107424941,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.853572368621826e-06,
+          "meanAbsoluteError": 1.6931613444626237e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.009124755859375,
+          "meanAbsoluteError": 0.0001948151912074536
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "P0861-crop",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 129,
+        "actualCount": 129,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9995252460429032,
+        "maximumScoreError": 3.0525028705596924e-05,
+        "maximumCornerErrorPx": 0.014153041708141245,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 129,
+        "actualCount": 129,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9995252460429032,
+        "maximumScoreError": 3.0525028705596924e-05,
+        "maximumCornerErrorPx": 0.014153041708141245,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 4.941225051879883e-05,
+          "meanAbsoluteError": 3.037121416582522e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.092010498046875,
+          "meanAbsoluteError": 0.0022081241477280855
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "blank",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 8.361414074897766e-06,
+          "meanAbsoluteError": 3.6106260381529864e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.110870361328125,
+          "meanAbsoluteError": 0.0024033482186496258
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "P0072-641x513",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507001757621765,
+        "meanAbsoluteError": 1.2663677750879287e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 9,
+        "actualCount": 9,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999534928369412,
+        "maximumScoreError": 1.0401010513305664e-05,
+        "maximumCornerErrorPx": 0.008163560236937428,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 9,
+        "actualCount": 9,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999596836742127,
+        "maximumScoreError": 9.492039680480957e-06,
+        "maximumCornerErrorPx": 0.007858384455687428,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.2964010238647461e-05,
+          "meanAbsoluteError": 8.166898624040186e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.03643798828125,
+          "meanAbsoluteError": 0.0009021866717375815
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "P0861-1537x769",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507076263427734,
+        "meanAbsoluteError": 3.324566932860762e-08,
+        "differentElements": 6,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 116,
+        "actualCount": 116,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9997294361567407,
+        "maximumScoreError": 7.280707359313965e-05,
+        "maximumCornerErrorPx": 0.008382200188862043,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 116,
+        "actualCount": 116,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999373738771659,
+        "maximumScoreError": 2.0772218704223633e-05,
+        "maximumCornerErrorPx": 0.007000685443699695,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 3.0174851417541504e-05,
+          "meanAbsoluteError": 1.4568354345101397e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.07135009765625,
+          "meanAbsoluteError": 0.0013246496673673391
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "P0072-tall",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017429202795028687,
+        "meanAbsoluteError": 2.196881609961565e-08,
+        "differentElements": 4,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 3,
+        "actualCount": 3,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9998904785033519,
+        "maximumScoreError": 1.5310943126678467e-05,
+        "maximumCornerErrorPx": 0.019007424761184666,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 3,
+        "actualCount": 3,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9998858677367144,
+        "maximumScoreError": 1.2993812561035156e-05,
+        "maximumCornerErrorPx": 0.018763284136184666,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.3715198040008545e-05,
+          "meanAbsoluteError": 1.9421447916556644e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.115814208984375,
+          "meanAbsoluteError": 0.0025224171113222837
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "main",
+      "id": "white-wide",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 6.47176057100296e-06,
+          "meanAbsoluteError": 2.3780901869940863e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.17364501953125,
+          "meanAbsoluteError": 0.004111499059945345
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "P0072",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.01750713586807251,
+        "meanAbsoluteError": 1.270283007670514e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999708215834078,
+        "maximumScoreError": 1.341104507446289e-05,
+        "maximumCornerErrorPx": 0.004309988151817379,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999902554302516,
+        "maximumScoreError": 1.6093254089355469e-06,
+        "maximumCornerErrorPx": 0.002784109245567379,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.9073486328125e-06,
+          "meanAbsoluteError": 1.837618057720647e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0070343017578125,
+          "meanAbsoluteError": 0.00020404555834829807
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "P0072",
+      "inputKind": "blob",
+      "input": {
+        "maxAbsoluteError": 0.01750713586807251,
+        "meanAbsoluteError": 1.270283007670514e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999708215834078,
+        "maximumScoreError": 1.341104507446289e-05,
+        "maximumCornerErrorPx": 0.004309988151817379,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 8,
+        "actualCount": 8,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999902554302516,
+        "maximumScoreError": 1.6093254089355469e-06,
+        "maximumCornerErrorPx": 0.002784109245567379,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.9073486328125e-06,
+          "meanAbsoluteError": 1.837618057720647e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0070343017578125,
+          "meanAbsoluteError": 0.00020404555834829807
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "P0861",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 136,
+        "actualCount": 136,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999903846581197,
+        "maximumScoreError": 6.556510925292969e-07,
+        "maximumCornerErrorPx": 0.0003980614744136801,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 136,
+        "actualCount": 136,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999903846581197,
+        "maximumScoreError": 6.556510925292969e-07,
+        "maximumCornerErrorPx": 0.0003980614744136801,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 9.5367431640625e-07,
+          "meanAbsoluteError": 6.929396612065375e-09
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.0023193359375,
+          "meanAbsoluteError": 2.8221977117937058e-05
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "P0072-rot90",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507076263427734,
+        "meanAbsoluteError": 1.7660538276231819e-07,
+        "differentElements": 32,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 13,
+        "actualCount": 13,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999827585763228,
+        "maximumScoreError": 3.0249357223510742e-06,
+        "maximumCornerErrorPx": 0.0015467846116052897,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 13,
+        "actualCount": 13,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999908838328057,
+        "maximumScoreError": 2.853572368621826e-06,
+        "maximumCornerErrorPx": 0.0004784052107424941,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.853572368621826e-06,
+          "meanAbsoluteError": 1.6931613444626237e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.009124755859375,
+          "meanAbsoluteError": 0.0001948151912074536
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "P0861-crop",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 129,
+        "actualCount": 129,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9995252460429032,
+        "maximumScoreError": 3.0525028705596924e-05,
+        "maximumCornerErrorPx": 0.014153041708141245,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 129,
+        "actualCount": 129,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9995252460429032,
+        "maximumScoreError": 3.0525028705596924e-05,
+        "maximumCornerErrorPx": 0.014153041708141245,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 4.941225051879883e-05,
+          "meanAbsoluteError": 3.037121416582522e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.092010498046875,
+          "meanAbsoluteError": 0.0022081241477280855
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "blank",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 8.361414074897766e-06,
+          "meanAbsoluteError": 3.6106260381529864e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.110870361328125,
+          "meanAbsoluteError": 0.0024033482186496258
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "P0072-641x513",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507001757621765,
+        "meanAbsoluteError": 1.2663677750879287e-07,
+        "differentElements": 23,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 9,
+        "actualCount": 9,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999534928369412,
+        "maximumScoreError": 1.0401010513305664e-05,
+        "maximumCornerErrorPx": 0.008163560236937428,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 9,
+        "actualCount": 9,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999596836742127,
+        "maximumScoreError": 9.492039680480957e-06,
+        "maximumCornerErrorPx": 0.007858384455687428,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 1.2964010238647461e-05,
+          "meanAbsoluteError": 8.166898624040186e-08
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.03643798828125,
+          "meanAbsoluteError": 0.0009021866717375815
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "P0861-1537x769",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017507076263427734,
+        "meanAbsoluteError": 3.324566932860762e-08,
+        "differentElements": 6,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 116,
+        "actualCount": 116,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9997294361567407,
+        "maximumScoreError": 7.280707359313965e-05,
+        "maximumCornerErrorPx": 0.008382200188862043,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 116,
+        "actualCount": 116,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9999373738771659,
+        "maximumScoreError": 2.0772218704223633e-05,
+        "maximumCornerErrorPx": 0.007000685443699695,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 3.0174851417541504e-05,
+          "meanAbsoluteError": 1.4568354345101397e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.07135009765625,
+          "meanAbsoluteError": 0.0013246496673673391
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "P0072-tall",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.017429202795028687,
+        "meanAbsoluteError": 2.196881609961565e-08,
+        "differentElements": 4,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 3,
+        "actualCount": 3,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9998904785033519,
+        "maximumScoreError": 1.5310943126678467e-05,
+        "maximumCornerErrorPx": 0.019007424761184666,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 3,
+        "actualCount": 3,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 0.9998858677367144,
+        "maximumScoreError": 1.2993812561035156e-05,
+        "maximumCornerErrorPx": 0.018763284136184666,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 2.3715198040008545e-05,
+          "meanAbsoluteError": 1.9421447916556644e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.115814208984375,
+          "meanAbsoluteError": 0.0025224171113222837
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "executionMode": "worker",
+      "id": "white-wide",
+      "inputKind": "rgba",
+      "input": {
+        "maxAbsoluteError": 0.0,
+        "meanAbsoluteError": 0.0,
+        "differentElements": 0,
+        "totalElements": 3145728
+      },
+      "endToEnd": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "sameTensor": {
+        "referenceCount": 0,
+        "actualCount": 0,
+        "missingClasses": [],
+        "extraIndices": [],
+        "minimumPolygonIoU": 1.0,
+        "maximumScoreError": 0.0,
+        "maximumCornerErrorPx": 0.0,
+        "passed": true
+      },
+      "raw": [
+        {
+          "name": "scores",
+          "maximumAbsoluteError": 6.47176057100296e-06,
+          "meanAbsoluteError": 2.3780901869940863e-07
+        },
+        {
+          "name": "rboxes",
+          "maximumAbsoluteError": 0.17364501953125,
+          "meanAbsoluteError": 0.004111499059945345
+        }
+      ]
+    }
+  ]
+}

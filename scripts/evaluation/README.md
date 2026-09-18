@@ -15,6 +15,7 @@ pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versi
 node scripts/evaluation/browser.mjs
 & $rotPython scripts/evaluation/prepare_reference.py --upstream $rotUpstream --feasibility-work $rotFeasibility --captured .tmp/evaluation/captured
 & $rotPython scripts/evaluation/compare.py --captured-reference
+node scripts/evaluation/performance.mjs
 node scripts/evaluation/verify.mjs
 ```
 
