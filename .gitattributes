@@ -1,0 +1,3 @@
+# 证据与复现脚本保持原始字节，避免换行转换破坏摘要。
+reports/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
+scripts/evaluation/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
