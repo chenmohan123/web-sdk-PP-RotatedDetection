@@ -41,5 +41,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: 阻止旧运行覆盖最新 Demo
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const latest = await github.rest.git.getRef({...context.repo, ref: 'heads/main'});
+            if (latest.data.object.sha !== context.sha) {
+              core.setFailed('当前运行已落后于 main，停止部署以保留最新 Demo。');
+            }
       - uses: actions/deploy-pages@v4
         id: deployment
