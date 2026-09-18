@@ -1,0 +1,161 @@
+{
+  "verifiedAt": "2026-09-18T13:47:11.708Z",
+  "base": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/",
+  "status": "passed",
+  "assets": [
+    {
+      "file": "demo-dist/assets/index-BOgVA15f.css",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/assets/index-BOgVA15f.css",
+      "bytes": 10389,
+      "sha256": "2c4dd856600bb704ad00a06e43b731ee6a79bc98a92f68e3cb45378514400a8f",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "file": "demo-dist/assets/index-CZa0PE8S.js",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/assets/index-CZa0PE8S.js",
+      "bytes": 246990,
+      "sha256": "74f6281e8ba8af2fbb5653bc73d21edaf559dcb48b42e80143959bc1172d9e4b",
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "file": "demo-dist/index.html",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/index.html",
+      "bytes": 386,
+      "sha256": "bb64c4b1685fd08e576b0dd0802430e35fcc7ffbdbe28008cdc145e0ba1076f8",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "file": "demo-dist/sdk/cache.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/cache.d.ts",
+      "bytes": 655,
+      "sha256": "46f245025fcc9b87c29c86ae77c8835e8d8b18c64975e2e2c783ac9e938f06a9",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/engine.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/engine.d.ts",
+      "bytes": 599,
+      "sha256": "fe815460d0fbd6b70a02de7e33e4ebe26aa29eb21317dbea579b8a3082b4c81a",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/errors.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/errors.d.ts",
+      "bytes": 444,
+      "sha256": "f241120c62538f16d97dce4e60f443da5c795290b28a16d73bfdf66d2bdf313e",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/image.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/image.d.ts",
+      "bytes": 148,
+      "sha256": "9d27b396d5c2d3c752937f01a33f94c16c5051197cb9da836bc31faefc01b330",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/index.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/index.d.ts",
+      "bytes": 344,
+      "sha256": "e9d77b0ca512476c980a64a15bb8d1cf776ab0d473138f815cfb1bdd63c3064d",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/index.js",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/index.js",
+      "bytes": 109015,
+      "sha256": "f065b0114ff690274c99b2706f46a49d06cb815a3b0a2126e98799a56e9ffbf9",
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "file": "demo-dist/sdk/index.js.map",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/index.js.map",
+      "bytes": 199421,
+      "sha256": "daf15700be87fb9078c4034d5cca3604797099a01097f16d4b784ed8754bff8f",
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "file": "demo-dist/sdk/inference.worker.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/inference.worker.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/inference.worker.js",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/inference.worker.js",
+      "bytes": 95484,
+      "sha256": "aa2da4999cfa8649ed379c3351a3c3089a2e6124713d2e50fd2c23f42da2b9fe",
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "file": "demo-dist/sdk/inference.worker.js.map",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/inference.worker.js.map",
+      "bytes": 175402,
+      "sha256": "81e96c498a2534168615951e91476172ba1f6777dd62b006e1de77b5a1b8fbe5",
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "file": "demo-dist/sdk/labels.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/labels.d.ts",
+      "bytes": 271,
+      "sha256": "7ecacf86ec3799871b4299e46afaa9478c1f9e8fab6f631a6c3268906c123e0a",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/ort-wasm-simd-threaded.asyncify.mjs",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/ort-wasm-simd-threaded.asyncify.mjs",
+      "bytes": 47507,
+      "sha256": "7236653b8565da4046e459cd0e274123419a1d9f1f8f18fd36c28058346ca655",
+      "contentType": "text/javascript; charset=utf-8"
+    },
+    {
+      "file": "demo-dist/sdk/ort-wasm-simd-threaded.asyncify.wasm",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/ort-wasm-simd-threaded.asyncify.wasm",
+      "bytes": 24254953,
+      "sha256": "7e83cd6cee77e478bc96a7e91b198144fb5e4126287daf1f9b54bb195ebcd55a",
+      "contentType": "application/wasm"
+    },
+    {
+      "file": "demo-dist/sdk/ort.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/ort.d.ts",
+      "bytes": 219,
+      "sha256": "ac4a0a2bb6021c858509894a705e25443a7938dbcf1e408aabf750a0da9f3907",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/ort.webgpu.bundle.min.mjs",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/ort.webgpu.bundle.min.mjs",
+      "bytes": 113035,
+      "sha256": "3a18c7f261e05d44a15b2eef18a28e5f53c044d5d140bcea6066baf1f09c8b53",
+      "contentType": "text/javascript; charset=utf-8"
+    },
+    {
+      "file": "demo-dist/sdk/postprocess.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/postprocess.d.ts",
+      "bytes": 479,
+      "sha256": "5732452d11a2e405a91ea5731651e6173e3c9e2b25c5c2e8b9670aeb813325e8",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/preprocess.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/preprocess.d.ts",
+      "bytes": 280,
+      "sha256": "19f0794525c04101bde9398c52b5c4581dfdf02808c6f3e3d142d940276386fb",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/runtime.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/runtime.d.ts",
+      "bytes": 174,
+      "sha256": "f18e330e868c02282c9127a0f90ade3dbe13e9eaa60bbf77ae2e82f21049b065",
+      "contentType": "video/mp2t"
+    },
+    {
+      "file": "demo-dist/sdk/types.d.ts",
+      "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/sdk/types.d.ts",
+      "bytes": 2701,
+      "sha256": "4622be087c8f489493e3fcd20248946642a39f0cea29682c598dbf58c15f35ff",
+      "contentType": "video/mp2t"
+    }
+  ]
+}

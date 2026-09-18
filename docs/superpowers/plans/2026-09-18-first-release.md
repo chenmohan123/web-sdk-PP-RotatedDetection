@@ -26,12 +26,12 @@
 - [x] 更新README/双语指南、清单、CHANGELOG与版本安装入口；历史本地报告保留其时点含义。
 - [x] CI/Pages/Release采用固定版本、最小权限、不可变tag/main祖先校验，准备npm Trusted Publishing与首次本机发布后的verify-only模式。
 - [x] 验证生产Demo从双Hub真实下载，覆盖两来源×CPU/GPU×main/Worker，SHA/CORS、显式失败不换源、JSON结果、浏览器无错误；同一构建记录摘要。
-- [ ] 单测、双类型、双构建、打包与sdk:check；质量证据保持已验收构建，独立审查发布差异并解决必要问题。
+- [x] 单测、双类型、双构建、打包与sdk:check；质量证据保持已验收构建，独立审查发布差异并解决必要问题。
 
 ### 3. GitHub、npm与正式HTTPS上线
 
 - [x] 建立公开`chenmohan123/web-sdk-PP-RotatedDetection`，以已有设计基线初始化main；配置无bypass的默认分支与tag Rulesets、About/topics/Pages环境。
-- [ ] 通过PR引入已审查产品与发布配置，等待最新CI通过后合并，记录PR与提交。Pages从受保护main部署。
+- [x] 通过PR引入已审查产品与发布配置，等待最新CI通过后合并，记录PR与提交。Pages从受保护main部署。
 - [ ] 首次npm发布使用当前登录，若npm强制用户安全验证则提供当前链接并继续其他独立工作；配置限定本仓库release.yml/npm环境的Trusted Publishing。
 - [ ] 发布不可变v0.1.0、运行发布工作流并核对npm包完整性/安装/浏览器、GitHub Release、线上Demo双源及远程治理回执。
 - [ ] 更新最终双语发布状态/清单与回执，经PR合并；保持本地工作树干净，保留运行预览与必要验证资料。

@@ -1,0 +1,462 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-09-18T13:46:38.638Z",
+  "version": "0.1.0",
+  "model": {
+    "id": "ppyoloe-r-s-1024-fp32",
+    "version": "0.1.0",
+    "status": "published",
+    "bytes": 33161415,
+    "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089",
+    "parameterCount": 8243749,
+    "precision": "fp32",
+    "opset": 17,
+    "input": [
+      1,
+      3,
+      1024,
+      1024
+    ],
+    "defaultSource": "modelscope",
+    "sources": [
+      {
+        "kind": "modelscope",
+        "repository": "chenmohan/web-sdk-pp-rotated-detection",
+        "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+        "path": "ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+        "downloadUrl": "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+        "bytes": 33161415,
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      },
+      {
+        "kind": "huggingface",
+        "repository": "chenmohan/web-sdk-pp-rotated-detection",
+        "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+        "path": "ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+        "downloadUrl": "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx",
+        "bytes": 33161415,
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      }
+    ]
+  },
+  "url": "https://chenmohan123.github.io/web-sdk-PP-RotatedDetection/",
+  "browser": "153.0.8010.12",
+  "results": [
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "backend": "wasm",
+      "mode": "main",
+      "status": "passed",
+      "detections": 136,
+      "runtime": {
+        "requestedBackend": "wasm",
+        "actualBackend": "wasm",
+        "runtimeVersion": "onnxruntime-web@1.27.0",
+        "executionMode": "main"
+      },
+      "model": {
+        "id": "ppyoloe-r-s-1024-fp32",
+        "version": "0.1.0",
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      },
+      "downloads": [
+        "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx"
+      ],
+      "scoreError": 0,
+      "cornerErrorPx": 0,
+      "timings": {
+        "decodeMs": 61.400000005960464,
+        "preprocessMs": 268.5,
+        "inferenceMs": 2308,
+        "postprocessMs": 151.3999999910593,
+        "totalMs": 2789.9000000059605
+      }
+    },
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "backend": "wasm",
+      "mode": "worker",
+      "status": "passed",
+      "detections": 136,
+      "runtime": {
+        "requestedBackend": "wasm",
+        "actualBackend": "wasm",
+        "runtimeVersion": "onnxruntime-web@1.27.0",
+        "executionMode": "worker"
+      },
+      "model": {
+        "id": "ppyoloe-r-s-1024-fp32",
+        "version": "0.1.0",
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      },
+      "downloads": [
+        "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx"
+      ],
+      "scoreError": 0,
+      "cornerErrorPx": 0,
+      "timings": {
+        "decodeMs": 37,
+        "preprocessMs": 313.5,
+        "inferenceMs": 2333.4000000059605,
+        "postprocessMs": 155.29999999701977,
+        "totalMs": 2845.7000000029802
+      }
+    },
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "backend": "webgpu",
+      "mode": "main",
+      "status": "passed",
+      "detections": 136,
+      "runtime": {
+        "requestedBackend": "webgpu",
+        "actualBackend": "webgpu",
+        "runtimeVersion": "onnxruntime-web@1.27.0",
+        "executionMode": "main"
+      },
+      "model": {
+        "id": "ppyoloe-r-s-1024-fp32",
+        "version": "0.1.0",
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      },
+      "downloads": [
+        "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx"
+      ],
+      "scoreError": 0,
+      "cornerErrorPx": 0,
+      "timings": {
+        "decodeMs": 42.099999994039536,
+        "preprocessMs": 401.5,
+        "inferenceMs": 1437.300000011921,
+        "postprocessMs": 178.59999999403954,
+        "totalMs": 2060.199999988079
+      }
+    },
+    {
+      "source": "modelscope",
+      "revision": "20632e3f350c664c2f88ea56b68bca0fe8a03349",
+      "backend": "webgpu",
+      "mode": "worker",
+      "status": "passed",
+      "detections": 136,
+      "runtime": {
+        "requestedBackend": "webgpu",
+        "actualBackend": "webgpu",
+        "runtimeVersion": "onnxruntime-web@1.27.0",
+        "executionMode": "worker"
+      },
+      "model": {
+        "id": "ppyoloe-r-s-1024-fp32",
+        "version": "0.1.0",
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      },
+      "downloads": [
+        "https://www.modelscope.cn/models/chenmohan/web-sdk-pp-rotated-detection/resolve/20632e3f350c664c2f88ea56b68bca0fe8a03349/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx"
+      ],
+      "scoreError": 0,
+      "cornerErrorPx": 0,
+      "timings": {
+        "decodeMs": 49.20000000298023,
+        "preprocessMs": 538.5999999940395,
+        "inferenceMs": 1575.6000000089407,
+        "postprocessMs": 348.19999998807907,
+        "totalMs": 2518.6000000089407
+      }
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "backend": "wasm",
+      "mode": "main",
+      "status": "passed",
+      "detections": 136,
+      "runtime": {
+        "requestedBackend": "wasm",
+        "actualBackend": "wasm",
+        "runtimeVersion": "onnxruntime-web@1.27.0",
+        "executionMode": "main"
+      },
+      "model": {
+        "id": "ppyoloe-r-s-1024-fp32",
+        "version": "0.1.0",
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      },
+      "downloads": [
+        "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx"
+      ],
+      "scoreError": 0,
+      "cornerErrorPx": 0,
+      "timings": {
+        "decodeMs": 47.6000000089407,
+        "preprocessMs": 292.6000000089407,
+        "inferenceMs": 2547.0999999940395,
+        "postprocessMs": 169.09999999403954,
+        "totalMs": 3056.9000000059605
+      }
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "backend": "wasm",
+      "mode": "worker",
+      "status": "passed",
+      "detections": 136,
+      "runtime": {
+        "requestedBackend": "wasm",
+        "actualBackend": "wasm",
+        "runtimeVersion": "onnxruntime-web@1.27.0",
+        "executionMode": "worker"
+      },
+      "model": {
+        "id": "ppyoloe-r-s-1024-fp32",
+        "version": "0.1.0",
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      },
+      "downloads": [
+        "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx"
+      ],
+      "scoreError": 0,
+      "cornerErrorPx": 0,
+      "timings": {
+        "decodeMs": 39.099999994039536,
+        "preprocessMs": 302,
+        "inferenceMs": 2310.800000011921,
+        "postprocessMs": 210,
+        "totalMs": 2865.8999999910593
+      }
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "backend": "webgpu",
+      "mode": "main",
+      "status": "passed",
+      "detections": 136,
+      "runtime": {
+        "requestedBackend": "webgpu",
+        "actualBackend": "webgpu",
+        "runtimeVersion": "onnxruntime-web@1.27.0",
+        "executionMode": "main"
+      },
+      "model": {
+        "id": "ppyoloe-r-s-1024-fp32",
+        "version": "0.1.0",
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      },
+      "downloads": [
+        "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx"
+      ],
+      "scoreError": 0,
+      "cornerErrorPx": 0,
+      "timings": {
+        "decodeMs": 39.900000005960464,
+        "preprocessMs": 404.5,
+        "inferenceMs": 1171.7999999970198,
+        "postprocessMs": 173.70000000298023,
+        "totalMs": 1790.5
+      }
+    },
+    {
+      "source": "huggingface",
+      "revision": "5ee386be20104afcc334e83ace6a5db048a00593",
+      "backend": "webgpu",
+      "mode": "worker",
+      "status": "passed",
+      "detections": 136,
+      "runtime": {
+        "requestedBackend": "webgpu",
+        "actualBackend": "webgpu",
+        "runtimeVersion": "onnxruntime-web@1.27.0",
+        "executionMode": "worker"
+      },
+      "model": {
+        "id": "ppyoloe-r-s-1024-fp32",
+        "version": "0.1.0",
+        "sha256": "de2f4c94061bda4bfaa0773ed5bc3aabdc59cf5b2f72301d15ae500b8f971089"
+      },
+      "downloads": [
+        "https://huggingface.co/chenmohan/web-sdk-pp-rotated-detection/resolve/5ee386be20104afcc334e83ace6a5db048a00593/ppyoloe-r-s-1024/0.1.0/ppyoloe-r-s-1024-fp32.onnx"
+      ],
+      "scoreError": 0,
+      "cornerErrorPx": 0,
+      "timings": {
+        "decodeMs": 36,
+        "preprocessMs": 336.70000000298023,
+        "inferenceMs": 1228.2999999970198,
+        "postprocessMs": 168.90000000596046,
+        "totalMs": 1774.8999999910593
+      }
+    }
+  ],
+  "pageErrors": [],
+  "explicitSourceFailure": "passed",
+  "assets": {
+    "dist/cache.d.ts": {
+      "bytes": 655,
+      "sha256": "46f245025fcc9b87c29c86ae77c8835e8d8b18c64975e2e2c783ac9e938f06a9"
+    },
+    "dist/engine.d.ts": {
+      "bytes": 599,
+      "sha256": "fe815460d0fbd6b70a02de7e33e4ebe26aa29eb21317dbea579b8a3082b4c81a"
+    },
+    "dist/errors.d.ts": {
+      "bytes": 444,
+      "sha256": "f241120c62538f16d97dce4e60f443da5c795290b28a16d73bfdf66d2bdf313e"
+    },
+    "dist/image.d.ts": {
+      "bytes": 148,
+      "sha256": "9d27b396d5c2d3c752937f01a33f94c16c5051197cb9da836bc31faefc01b330"
+    },
+    "dist/index.d.ts": {
+      "bytes": 344,
+      "sha256": "e9d77b0ca512476c980a64a15bb8d1cf776ab0d473138f815cfb1bdd63c3064d"
+    },
+    "dist/index.js": {
+      "bytes": 109015,
+      "sha256": "f065b0114ff690274c99b2706f46a49d06cb815a3b0a2126e98799a56e9ffbf9"
+    },
+    "dist/index.js.map": {
+      "bytes": 199421,
+      "sha256": "daf15700be87fb9078c4034d5cca3604797099a01097f16d4b784ed8754bff8f"
+    },
+    "dist/inference.worker.d.ts": {
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    "dist/inference.worker.js": {
+      "bytes": 95484,
+      "sha256": "aa2da4999cfa8649ed379c3351a3c3089a2e6124713d2e50fd2c23f42da2b9fe"
+    },
+    "dist/inference.worker.js.map": {
+      "bytes": 175402,
+      "sha256": "81e96c498a2534168615951e91476172ba1f6777dd62b006e1de77b5a1b8fbe5"
+    },
+    "dist/labels.d.ts": {
+      "bytes": 271,
+      "sha256": "7ecacf86ec3799871b4299e46afaa9478c1f9e8fab6f631a6c3268906c123e0a"
+    },
+    "dist/ort-wasm-simd-threaded.asyncify.mjs": {
+      "bytes": 47507,
+      "sha256": "7236653b8565da4046e459cd0e274123419a1d9f1f8f18fd36c28058346ca655"
+    },
+    "dist/ort-wasm-simd-threaded.asyncify.wasm": {
+      "bytes": 24254953,
+      "sha256": "7e83cd6cee77e478bc96a7e91b198144fb5e4126287daf1f9b54bb195ebcd55a"
+    },
+    "dist/ort.d.ts": {
+      "bytes": 219,
+      "sha256": "ac4a0a2bb6021c858509894a705e25443a7938dbcf1e408aabf750a0da9f3907"
+    },
+    "dist/ort.webgpu.bundle.min.mjs": {
+      "bytes": 113035,
+      "sha256": "3a18c7f261e05d44a15b2eef18a28e5f53c044d5d140bcea6066baf1f09c8b53"
+    },
+    "dist/postprocess.d.ts": {
+      "bytes": 479,
+      "sha256": "5732452d11a2e405a91ea5731651e6173e3c9e2b25c5c2e8b9670aeb813325e8"
+    },
+    "dist/preprocess.d.ts": {
+      "bytes": 280,
+      "sha256": "19f0794525c04101bde9398c52b5c4581dfdf02808c6f3e3d142d940276386fb"
+    },
+    "dist/runtime.d.ts": {
+      "bytes": 174,
+      "sha256": "f18e330e868c02282c9127a0f90ade3dbe13e9eaa60bbf77ae2e82f21049b065"
+    },
+    "dist/types.d.ts": {
+      "bytes": 2701,
+      "sha256": "4622be087c8f489493e3fcd20248946642a39f0cea29682c598dbf58c15f35ff"
+    },
+    "demo-dist/assets/index-BOgVA15f.css": {
+      "bytes": 10389,
+      "sha256": "2c4dd856600bb704ad00a06e43b731ee6a79bc98a92f68e3cb45378514400a8f"
+    },
+    "demo-dist/assets/index-CZa0PE8S.js": {
+      "bytes": 246990,
+      "sha256": "74f6281e8ba8af2fbb5653bc73d21edaf559dcb48b42e80143959bc1172d9e4b"
+    },
+    "demo-dist/index.html": {
+      "bytes": 386,
+      "sha256": "bb64c4b1685fd08e576b0dd0802430e35fcc7ffbdbe28008cdc145e0ba1076f8"
+    },
+    "demo-dist/sdk/cache.d.ts": {
+      "bytes": 655,
+      "sha256": "46f245025fcc9b87c29c86ae77c8835e8d8b18c64975e2e2c783ac9e938f06a9"
+    },
+    "demo-dist/sdk/engine.d.ts": {
+      "bytes": 599,
+      "sha256": "fe815460d0fbd6b70a02de7e33e4ebe26aa29eb21317dbea579b8a3082b4c81a"
+    },
+    "demo-dist/sdk/errors.d.ts": {
+      "bytes": 444,
+      "sha256": "f241120c62538f16d97dce4e60f443da5c795290b28a16d73bfdf66d2bdf313e"
+    },
+    "demo-dist/sdk/image.d.ts": {
+      "bytes": 148,
+      "sha256": "9d27b396d5c2d3c752937f01a33f94c16c5051197cb9da836bc31faefc01b330"
+    },
+    "demo-dist/sdk/index.d.ts": {
+      "bytes": 344,
+      "sha256": "e9d77b0ca512476c980a64a15bb8d1cf776ab0d473138f815cfb1bdd63c3064d"
+    },
+    "demo-dist/sdk/index.js": {
+      "bytes": 109015,
+      "sha256": "f065b0114ff690274c99b2706f46a49d06cb815a3b0a2126e98799a56e9ffbf9"
+    },
+    "demo-dist/sdk/index.js.map": {
+      "bytes": 199421,
+      "sha256": "daf15700be87fb9078c4034d5cca3604797099a01097f16d4b784ed8754bff8f"
+    },
+    "demo-dist/sdk/inference.worker.d.ts": {
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    "demo-dist/sdk/inference.worker.js": {
+      "bytes": 95484,
+      "sha256": "aa2da4999cfa8649ed379c3351a3c3089a2e6124713d2e50fd2c23f42da2b9fe"
+    },
+    "demo-dist/sdk/inference.worker.js.map": {
+      "bytes": 175402,
+      "sha256": "81e96c498a2534168615951e91476172ba1f6777dd62b006e1de77b5a1b8fbe5"
+    },
+    "demo-dist/sdk/labels.d.ts": {
+      "bytes": 271,
+      "sha256": "7ecacf86ec3799871b4299e46afaa9478c1f9e8fab6f631a6c3268906c123e0a"
+    },
+    "demo-dist/sdk/ort-wasm-simd-threaded.asyncify.mjs": {
+      "bytes": 47507,
+      "sha256": "7236653b8565da4046e459cd0e274123419a1d9f1f8f18fd36c28058346ca655"
+    },
+    "demo-dist/sdk/ort-wasm-simd-threaded.asyncify.wasm": {
+      "bytes": 24254953,
+      "sha256": "7e83cd6cee77e478bc96a7e91b198144fb5e4126287daf1f9b54bb195ebcd55a"
+    },
+    "demo-dist/sdk/ort.d.ts": {
+      "bytes": 219,
+      "sha256": "ac4a0a2bb6021c858509894a705e25443a7938dbcf1e408aabf750a0da9f3907"
+    },
+    "demo-dist/sdk/ort.webgpu.bundle.min.mjs": {
+      "bytes": 113035,
+      "sha256": "3a18c7f261e05d44a15b2eef18a28e5f53c044d5d140bcea6066baf1f09c8b53"
+    },
+    "demo-dist/sdk/postprocess.d.ts": {
+      "bytes": 479,
+      "sha256": "5732452d11a2e405a91ea5731651e6173e3c9e2b25c5c2e8b9670aeb813325e8"
+    },
+    "demo-dist/sdk/preprocess.d.ts": {
+      "bytes": 280,
+      "sha256": "19f0794525c04101bde9398c52b5c4581dfdf02808c6f3e3d142d940276386fb"
+    },
+    "demo-dist/sdk/runtime.d.ts": {
+      "bytes": 174,
+      "sha256": "f18e330e868c02282c9127a0f90ade3dbe13e9eaa60bbf77ae2e82f21049b065"
+    },
+    "demo-dist/sdk/types.d.ts": {
+      "bytes": 2701,
+      "sha256": "4622be087c8f489493e3fcd20248946642a39f0cea29682c598dbf58c15f35ff"
+    }
+  }
+}
