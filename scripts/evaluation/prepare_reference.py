@@ -63,19 +63,23 @@ def infer(tensor, scale):
 if args.captured:
     # 捕获由 SDK 的实际 session.run feeds 提供，避免使用另一套浏览器预处理代替被测路径。
     records = json.loads((args.captured / 'captures.json').read_text(encoding='utf-8'))
-    rows = []
+    rows, checked_inputs = [], {}
     for item in records:
         tensor_file = args.captured / item['inputFile']
         assert sha(tensor_file) == item['inputSha256']
-        tensor = np.fromfile(tensor_file, dtype='<f4').reshape(1, 3, 1024, 1024)
-        expected, scores, rboxes = infer(tensor, item['scaleFactor'])
-        target = args.captured / 'paddle' / (item['id'] + '.npz')
-        target.parent.mkdir(parents=True, exist_ok=True)
-        np.savez_compressed(target, official=expected, scores=scores, rboxes=rboxes)
+        identity = (item['inputSha256'], tuple(item['scaleFactor']))
+        if identity not in checked_inputs:
+            tensor = np.fromfile(tensor_file, dtype='<f4').reshape(1, 3, 1024, 1024)
+            expected, scores, rboxes = infer(tensor, item['scaleFactor'])
+            target = args.captured / 'paddle' / (item['id'] + '.npz')
+            target.parent.mkdir(parents=True, exist_ok=True)
+            np.savez_compressed(target, official=expected, scores=scores, rboxes=rboxes)
+            checked_inputs[identity] = (target, len(expected))
+        target, count = checked_inputs[identity]
         rows.append({'id': item['id'], 'inputSha256': item['inputSha256'], 'file': str(target.relative_to(args.captured)),
-                     'sha256': sha(target), 'count': len(expected)})
-        print(item['id'], len(expected), flush=True)
-    dump(report / 'captured-reference.json', {'status': 'passed', 'rows': rows})
+                     'sha256': sha(target), 'count': count})
+        print(item['id'], count, flush=True)
+    dump(report / 'captured-reference.json', {'status': 'passed', 'uniqueInputs': len(checked_inputs), 'rows': rows})
     sys.exit(0)
 
 first_path = upstream / 'demo/P0072__1.0__0___0.png'
