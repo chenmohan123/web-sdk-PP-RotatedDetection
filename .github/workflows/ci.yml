@@ -1,0 +1,30 @@
+name: 验证
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false install --frozen-lockfile
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false test
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false typecheck
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false typecheck:demo
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build:demo
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false check:package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: demo-candidate
+          path: demo-dist

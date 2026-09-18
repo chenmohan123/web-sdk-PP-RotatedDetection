@@ -1,0 +1,36 @@
+name: 发布候选
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  release:
+    # 上传双源并完成远程治理验收后由维护者显式启用。
+    if: vars.RELEASE_READY == 'true' && startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false install --frozen-lockfile
+      - name: 验证双源发布门禁
+        run: node --input-type=module -e "import fs from 'node:fs'; const m=JSON.parse(fs.readFileSync('models/model.json')); if(m.status!=='published'||!['modelscope','huggingface'].every(k=>m.sources.some(s=>s.kind===k))) process.exit(1);"
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false test
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false typecheck
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false typecheck:demo
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false build:demo
+      - run: pnpm --config.verify-deps-before-run=false --config.manage-package-manager-versions=false check:package
+      - run: npm pack --ignore-scripts
+      - name: 创建草稿发布
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" --verify-tag --draft --title "$GITHUB_REF_NAME" --notes-file CHANGELOG.md *.tgz
