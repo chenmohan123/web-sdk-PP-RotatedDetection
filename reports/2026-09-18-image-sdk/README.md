@@ -47,6 +47,12 @@ Windows 11 10.0.26200、Chromium 153.0.8010.12、ORT Web 1.27.0、Intel i5-10400
 
 ## 产品收尾与发布边界
 
-核心代码、Demo/文档和全项目验收分阶段完成，最终UI/标准检查回执在收尾时补充。模型来源、公开仓库、npm与正式HTTPS Demo本轮尚未发布；不能用本地URL代替双源固定提交证据。
+本地公共API、React Demo、Vanilla示例、双语指南和发布工作流骨架已完成。最终本地验证：7个测试文件、33项单测，runtime/Demo类型检查、SDK/Demo生产构建和npm包检查均通过；npm候选24个文件、压缩6,104,150字节，无模型、图片或开发资料。构建后重新核对两份SDK产物摘要，与40项数值验收完全一致。
+
+[Demo浏览器回执](demo-browser.json)记录1280桌面WebGPU与390桌面视口WASM各136目标，选中/切语言画布位置稳定、拖放、取消、JSON与PNG导出、缓存命中/清理、损坏输入和无横向溢出均通过，pageerror为空。[Vanilla回执](vanilla-browser.json)记录公共API真实WASM推理136目标。主代理目视两种中文截图，确认四点框、固定选中区与Detection风格布局。截图和DOTA素材只留忽略目录，不随产品分发。390px不是手机实测。
+
+[标准检查最终回执](standard-after.json)为partial：required通过13、失败6、远程skip4；recommended通过2、失败1。唯一schema错误为assets为空（CONFIG-001），由此引出CACHE-001、META-001、MODEL-001、PERF-001、RUNTIME-001及推荐EXAMPLE-003级联失败。字段已按实际实现填写；待双Hub上传并填入不可变模型资产后重跑，不能宣称发布合规。
+
+模型来源、公开仓库、npm与正式HTTPS Demo本轮尚未发布；不能用本地URL代替双源固定提交证据。生产构建禁止未分发来源推理、不包含本地模型地址。下一阶段需完成ModelScope/Hugging Face分发与CORS/SHA校验、远程仓库治理、首次npm与正式Demo发布。
 
 首版不包含视频、摄像头、切片拼接、FCOSR、FP16/量化或NPU。未验证移动端，也不阻塞本轮桌面开发。模型固定身份及许可采用依据延续[门户可行性评估](https://github.com/chenmohan123/chenmohan123.github.io/tree/674a0705ff56c7b9ce32f0bfd6733f536dfe9029/reports/rotated-detection/2026-09-18-feasibility)。完整复现见[验收脚本说明](../../scripts/evaluation/README.md)。
